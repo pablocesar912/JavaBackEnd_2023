@@ -1,0 +1,15 @@
+Algoritmo ej3
+	Definir n1,n2 Como Entero
+	Escribir "Ingrese los 2 numeros: "
+	Leer n1,n2
+	Si multiplo(n1,n2)=0 Entonces
+		Escribir "VERDADERO"
+	SiNo
+		Escribir "FALSO"
+	FinSi
+FinAlgoritmo
+
+Funcion resultado = multiplo(n1,n2)
+	Definir resultado Como Entero
+	resultado=n2 MOD n1
+FinFuncion

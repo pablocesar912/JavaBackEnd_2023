@@ -1,0 +1,18 @@
+Algoritmo extra3
+	
+	Definir n1,n2,rest1,rest2 Como Entero
+	Escribir "Ingrese el 1er numero enteros"
+	Leer n1
+	Escribir "Ingrese el 2do numero enteros"
+	Leer n2
+	
+	rest1 = n1 MOD 2
+	rest2 = n2 MOD 2
+	
+	Si (rest1=0) y (rest2=0) Entonces
+		Escribir "Ambos numeros son pares"
+	SiNo
+		Escribir "Los numeros no son pares, o uno de ellos no es par"
+	Fin Si
+	
+FinAlgoritmo

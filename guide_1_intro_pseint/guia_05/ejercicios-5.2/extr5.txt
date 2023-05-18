@@ -1,0 +1,41 @@
+Algoritmo sin_titulo
+	Definir m,f Como Entero
+	Escribir "Ingrese la cantidad de filas deseadas"
+	Leer f
+	Dimension m[f,3]
+	cargar(m,f)
+	mostr(m,f)
+FinAlgoritmo
+
+SubProceso cargar(m,f)
+	Definir i,j,s Como Entero
+	Escribir "Ingrese los valores"
+	Para i<-0 Hasta f-1 Con Paso 1 Hacer
+		s=0
+		Para j<-0 Hasta 1 Con Paso 1 Hacer
+			Escribir Sin Saltar"[",i,"] [",j,"]"
+			Leer m[i,j]
+			s=s+m[i,j]
+		Fin Para
+		m[i,2]=s
+		Escribir ""
+	Fin Para
+FinSubProceso
+
+SubAlgoritmo mostr(m,f)
+	Definir i,j,s Como Entero
+	Para i<-0 Hasta f-1 Con Paso 1 Hacer
+		Para j<-0 Hasta 2 Con Paso 1 Hacer
+			Escribir Sin Saltar"[",m[i,j],"] "
+			Si j=1 Entonces
+				Escribir Sin Saltar"= "
+			SiNo
+				Si j<2 Entonces
+					Escribir Sin Saltar"+ "
+				FinSi
+			FinSi
+		Fin Para
+		Escribir ""
+	Fin Para
+FinSubAlgoritmo
+	

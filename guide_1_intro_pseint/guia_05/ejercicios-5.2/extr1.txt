@@ -1,0 +1,29 @@
+Algoritmo extr1
+	Definir v,n Como Entero
+	Escribir "Ingrese el tamaño de la matriz"
+	Leer n
+	Dimension v[n,n]
+	genera(v,n)
+	mostr(v,n)
+FinAlgoritmo
+
+SubProceso genera(v,n)
+	Definir i,j Como Entero
+	Para i<-0 Hasta n-1 Con Paso 1 Hacer
+		Para j<-0 Hasta n-1 Con Paso 1 Hacer
+			v[i,j]=Aleatorio(0,9)
+		Fin Para
+	Fin Para
+FinSubProceso
+
+SubAlgoritmo mostr(v,n)
+	Definir i,j Como Entero
+	Escribir "<<<<< Matriz generada >>>>>"
+	Para i<-0 Hasta n-1 Con Paso 1 Hacer
+		Para j<-0 Hasta n-1 Con Paso 1 Hacer
+			Escribir Sin Saltar"[",v[i,j],"]"
+		Fin Para
+		Escribir ""
+	Fin Para
+FinSubAlgoritmo
+	

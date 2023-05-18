@@ -1,0 +1,26 @@
+Algoritmo extra4
+	
+	Definir hr,min,import,naft Como Real
+	Escribir "Tiempo transcurrido del uso del vehiculo"
+	Escribir "Hora:"
+	Leer hr 
+	Escribir "Minitos:"
+	Leer min
+	
+	si (hr <= 2) y (min = 0) Entonces
+		Escribir "Su importe a pagar es de $400 y la nafta va de regalo"
+	SiNo
+		hr= hr*60
+		min= min + hr
+		import= (min * 5.20)
+		
+		Escribir "Litros Nafta ocupado"
+		Leer naft
+		
+		naft = naft*40
+		
+		Escribir "Su importe total a pagar es de $ ",(import+naft) 
+		
+	FinSi
+	
+FinAlgoritmo

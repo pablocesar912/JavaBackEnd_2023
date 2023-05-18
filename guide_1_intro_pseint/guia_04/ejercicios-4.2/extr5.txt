@@ -1,0 +1,13 @@
+Algoritmo extr5
+	Definir n Como Entero
+	Escribir "Ingrese numero de 2 cifras"
+	Leer n
+	Escribir "la suma de los digitos es: ",suma(n)
+FinAlgoritmo
+Funcion r=suma(n)
+	Definir r,a,b Como Real
+	a=n MOD 10
+	b=n/10
+	r=trunc(a)+trunc(b)
+FinFuncion
+	

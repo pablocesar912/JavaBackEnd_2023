@@ -1,0 +1,32 @@
+Algoritmo extr6
+	Definir n,i,a,r,b Como Entero
+	i=0
+	r=0
+	Escribir "Ingrese numero de cifras"
+	Leer n
+	Escribir "El numero se leera de Derecha a Izuierda"
+	Repetir
+		a=trunc(n MOD 10)
+		n=trunc(n/10)
+		Si (ver(n,a))<>0 Entonces
+			Escribir"ImPar"
+		SiNo
+			Escribir"Par"
+		FinSi
+	Mientras Que n>10	
+	a=n
+	Si (ver(n,a))<>0 Entonces
+		Escribir"ImPar"
+	SiNo
+		Escribir"Par"
+	FinSi
+FinAlgoritmo
+
+Funcion soluc=ver(n,a)
+	Definir soluc Como Entero
+	soluc=0
+		Si (a MOD 2)<>0 Entonces
+			soluc=1 // IMPAR
+		FinSi
+FinFuncion
+	

@@ -1,0 +1,24 @@
+Algoritmo ej4
+	Definir v,i,n Como Entero
+	Escribir "Ingrese la cantidad de numeros a ingresar"
+	Leer n
+	Dimension v(n)
+	Escribir "Ingrese los numeros"
+	Para i<-0 Hasta (n-1) Con Paso 1 Hacer
+		Leer v(i)
+	FinPara
+	Escribir "El mayor numero ingresado es: ",mayor(v,n)
+FinAlgoritmo
+
+Funcion val=mayor(v,n)
+	Definir val,i Como Entero
+	Para i<-0 Hasta (n-1) Con Paso 1 Hacer
+		Si i=0 Entonces
+			val=v(i)
+		SiNo
+			Si v(i)>val Entonces
+				val=v(i)
+			FinSi
+		FinSi
+	Fin Para
+FinFuncion

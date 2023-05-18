@@ -1,0 +1,18 @@
+SubProceso espacio(l,fop)
+	Definir aux Como Caracter
+	Definir i Como Entero
+	Para i<-0 Hasta (l-1) Con Paso 1 Hacer
+		aux=Concatenar(SubCadena(fop,i,i)," ")
+		Escribir Sin Saltar aux
+	Fin Para
+FinSubProceso
+
+Algoritmo extr1
+	Definir fop Como Caracter
+	Definir i,l Como Entero
+	Escribir "Ingrese la frase o palabra"
+	Leer fop
+	l=Longitud(fop)
+	espacio(l,fop)
+	Escribir""
+FinAlgoritmo

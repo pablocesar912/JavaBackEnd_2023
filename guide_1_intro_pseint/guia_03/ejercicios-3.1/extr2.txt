@@ -1,0 +1,18 @@
+Algoritmo extr2
+	
+	Definir i,max,menor,n Como Entero
+	i=1
+	Escribir "Ingrese el Max "
+	Leer max
+	Escribir "Ingrese el menor"
+	Leer menor
+	
+	Escribir "Ingrese numero ",i
+	Leer n
+	Mientras n<=max y n>=menor Hacer
+		i=i+1
+		Escribir "Ingrese numero ",i
+		Leer n
+	Fin Mientras
+	Escribir "La cantidad de numeros ingresados: ",i-1
+FinAlgoritmo

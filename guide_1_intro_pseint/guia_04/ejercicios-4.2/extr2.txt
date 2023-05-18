@@ -1,0 +1,14 @@
+Algoritmo extr2
+	Definir cad Como Caracter
+	Repetir
+		Escribir"Ingrese numero"
+		Leer cad
+	Mientras Que (Longitud(cad))>3
+	Escribir "Se hizo el cambio de Variable de ",cambio(cad)
+FinAlgoritmo
+
+Funcion r=cambio(cad)
+	Definir r Como Real
+	r=ConvertirANumero(cad)
+FinFuncion
+	

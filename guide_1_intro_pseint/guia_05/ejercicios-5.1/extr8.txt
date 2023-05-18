@@ -1,0 +1,21 @@
+Algoritmo sin_titulo
+	Definir tam,i,v Como Entero
+	Escribir "ingrese el tamaño vector"
+	Leer tam
+	Escribir "Ingrese los valores del arreglo"
+	Dimension v(tam)
+	Para i<-0 Hasta tam-1 Con Paso 1 Hacer
+		Leer v(i)
+	FinPara
+	Escribir "La suma de los elementos de los vectores da: ",suma(v,tam)
+FinAlgoritmo
+
+funcion r=suma(v,tam)
+	Definir r Como Entero
+	Si tam=0 Entonces
+		v[0]=0
+	SiNo
+		r=v[tam-1]+suma(v,(tam-1))
+	FinSi
+FinFuncion
+	

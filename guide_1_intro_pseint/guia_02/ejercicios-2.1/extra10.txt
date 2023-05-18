@@ -1,0 +1,30 @@
+Algoritmo Extra10
+	
+	Definir precio,kg Como Real
+	Escribir "Ingrese el precio del KG de Manzana"
+	Leer precio
+	Escribir "Ingrese cuantos KG desea comprar"
+	Leer kg
+	
+	Si (kg >= 0) y (kg <= 2) Entonces
+		Escribir "Descuento de 0%"
+		Escribir "El precio total a pagar es: $",precio*kg
+	SiNo
+		Si (kg >= 2.01) y (kg <= 5) Entonces
+			Escribir "Descuento de 10%"
+			Escribir "El precio total a pagar es: $",(precio*kg)-(10*precio)/100
+		SiNo
+			Si (kg >= 5.01) y (kg <= 10) Entonces
+				Escribir "Descuento de 15%"
+				Escribir "El precio total a pagar es: $",(precio*kg)-(15*precio)/100
+			SiNo
+				Si kg > 10 Entonces
+					Escribir "Descuento de 20%"
+					Escribir "El precio total a pagar es: $",(precio*kg)-(20*precio)/100
+				Fin Si
+			Fin Si
+		Fin Si
+	Fin Si
+	
+	
+FinAlgoritmo

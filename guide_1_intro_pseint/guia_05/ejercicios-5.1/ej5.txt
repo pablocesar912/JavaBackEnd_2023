@@ -1,0 +1,96 @@
+Algoritmo ej5
+	Definir n,va,vb,vc,i,c Como Entero
+	n=0
+	c=0
+	Definir opc,dat Como Caracter
+	
+	Repetir
+		Limpiar Pantalla
+	Escribir "                  <<<<<< MENU >>>>>>"
+	Escribir "a - Llenar Vector A,tamaño N,elemento con n° aleatorio"
+	Escribir "b - Llenar Vector A,tamaño N,elemento con n° aleatorio"
+	Escribir "c - Llenar Vector C con la suma de los vectores A y B"
+	Escribir "d - Llenar Vector C con la resta de los vectores B y A."
+	Escribir "e - Mostrar Vector A, B, o C"
+	Escribir "f - Salir"
+	Leer opc
+	Segun Minusculas(opc) Hacer
+		"a":
+			si c=0 Entonces
+				Escribir "Ingrese el tamaño del vector"
+				Leer n
+				Dimension va(n)
+				Para i<-0 Hasta n-1 Con Paso 1 Hacer
+					va(i)=Aleatorio(-100,100)
+				Fin Para
+				c=1
+			SiNo
+				Dimension va(n)
+				Para i<-0 Hasta n-1 Con Paso 1 Hacer
+					va(i)=Aleatorio(-100,100)
+				Fin Para
+			FinSi
+			Escribir "Se genero el Vector A"
+			Esperar Tecla
+		"b":
+			si c=0 Entonces
+				Escribir "Ingrese el tamaño del vector"
+				Leer n
+				Dimension vb(n)
+				Para i<-0 Hasta n-1 Con Paso 1 Hacer
+					vb(i)=Aleatorio(-100,100)
+				Fin Para
+				c=1
+			SiNo
+				Dimension vb(n)
+				Para i<-0 Hasta n-1 Con Paso 1 Hacer
+					vb(i)=Aleatorio(-100,100)
+				Fin Para
+			FinSi
+			Escribir "Se genero el Vector B"
+			Esperar Tecla
+		"c":
+			Si n<>0 Entonces
+				Dimension vc(n)
+				Para i<-0 Hasta n-1 Con Paso 1 Hacer
+					vc[i]=va[i]+vb[i]
+				Fin Para
+			SiNo
+				Escribir "No genero el Vector A o Vector B"
+				Esperar Tecla
+			FinSi
+		"d":
+			Dimension vc(n)
+			Para i<-0 Hasta n-1 Con Paso 1 Hacer
+				vc[i]=vb[i]-va[i]
+			Fin Para
+		"e":
+			Escribir "Que vector queire ver: A,B o C"
+			Leer dat
+			Segun Mayusculas(dat) Hacer
+				"A":
+					Para i<-0 Hasta n-1 Con Paso 1 Hacer
+						Escribir Sin Saltar "[",va[i],"]"
+					Fin Para
+					Escribir "Precione cualquier tecla para continuar........."
+					Esperar Tecla
+				"B":
+					Para i<-0 Hasta n-1 Con Paso 1 Hacer
+						Escribir Sin Saltar "[",vb[i],"]"
+					Fin Para
+					Escribir "Precione cualquier tecla para continuar........."
+					Esperar Tecla
+				"C":
+					Para i<-0 Hasta n-1 Con Paso 1 Hacer
+						Escribir Sin Saltar "[",vc[i],"]"
+					Fin Para
+					Escribir "Precione cualquier tecla para continuar........."
+					Esperar Tecla
+				De Otro Modo:
+					Escribir "Dato ingresado incorrecto"
+					Esperar Tecla
+			Fin Segun
+	      Fin Segun
+	Mientras Que opc<>"f"
+	Escribir "Muchas Gracias por usar el programa.Que tenga un buen dia!!!"
+FinAlgoritmo

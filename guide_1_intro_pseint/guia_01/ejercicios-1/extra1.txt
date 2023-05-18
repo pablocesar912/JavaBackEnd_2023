@@ -1,0 +1,18 @@
+Algoritmo extra1
+	
+	Definir ninos,ninas,prom1,prom2,total Como Real
+	
+	Escribir "Ingrese la cantidad de Niños del Curso"
+	Leer ninos
+	Escribir "Ingrese la cantidad de Niñas del Curso"
+	Leer ninas
+	
+	total= ninos + ninas
+	
+	prom1 = ((ninos)/total)*100
+	prom2 = ((ninas)/total)*100
+	
+	Escribir "El promedio de Niños en el curso es ",prom1,"%"
+	Escribir "El promedio de Niños en el curso es ",prom2,"%"
+	
+FinAlgoritmo

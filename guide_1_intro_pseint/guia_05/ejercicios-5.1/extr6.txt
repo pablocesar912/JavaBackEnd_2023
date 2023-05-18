@@ -1,0 +1,33 @@
+Algoritmo extr6
+	Definir v,i,n Como Entero
+	Escribir "Ingrese la cantidad de numeros a ingresar"
+	Leer n
+	Dimension v(n)
+	Escribir "Ingrese los numeros"
+	Para i<-0 Hasta (n-1) Con Paso 1 Hacer
+		Leer v(i)
+	FinPara
+	Escribir "La diferencia entre mayor y menor es: ",difer(v,n)
+FinAlgoritmo
+
+Funcion val=difer(v,n)
+	Definir val,i,mayor,menor Como Entero
+	Para i<-0 Hasta (n-1) Con Paso 1 Hacer
+		Si i=0 Entonces
+			mayor=v(i)
+		SiNo
+			Si v(i)>mayor Entonces
+				mayor=v(i)
+			FinSi
+		FinSi
+		Si i=0 Entonces
+			menor=v(i)
+		SiNo
+			Si v(i)<menor Entonces
+				menor=v(i)
+			FinSi
+		FinSi
+	Fin Para
+	val=mayor-menor
+FinFuncion
+

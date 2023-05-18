@@ -1,0 +1,17 @@
+Algoritmo recursivo
+	Definir n Como Entero
+	Escribir "Ingrese el numero"
+	Leer n
+	Escribir "El factorial de ",n," es: ",factorial(n)
+FinAlgoritmo
+
+Funcion f=factorial(n)
+	Definir f Como Entero
+	Si n=0 o n=1 Entonces
+		f=1
+	SiNo
+		f=n*factorial(n-1)
+		Escribir "",f
+	FinSi
+FinFuncion
+	

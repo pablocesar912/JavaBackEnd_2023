@@ -1,0 +1,16 @@
+Algoritmo extra4
+	
+	Definir dia,h,mn,sg Como Real
+	Escribir"Ingrese la cantidad de dia a convertir en hora,min y seg"
+	Leer dia
+	
+	h = (dia*24)/1
+	mn = (dia*1440)/1
+	sg = (dia*86400)/1
+	
+	Escribir "La cantidad en horas es ",h
+	Escribir "La cantidad en minutos es ",mn
+	Escribir "La cantidad en segundo es ",sg
+	
+	
+FinAlgoritmo

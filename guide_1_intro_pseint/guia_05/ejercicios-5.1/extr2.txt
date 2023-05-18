@@ -1,0 +1,12 @@
+Algoritmo extr2
+	Definir suma,tam,v,i Como Entero
+	suma=0
+	Escribir "Ingrese el tamaño del vector"
+	Leer tam
+	Dimension v(tam)
+	Para i<-0 Hasta tam-1 Con Paso 1 Hacer
+		Leer v[i]
+		suma=suma+v[i]
+	Fin Para
+	Escribir "El promedio de los numeros ingresados: ",suma/tam
+FinAlgoritmo

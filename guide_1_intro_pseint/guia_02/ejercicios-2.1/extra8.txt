@@ -1,0 +1,16 @@
+Algoritmo Extra8
+	Definir llantas Como Entero
+	Escribir "Cantidad de llantas que desea comprar"
+	Leer llantas
+	
+	Segun llantas Hacer
+		1,2,3,4,:
+			Escribir "El monto a pagar es $",llantas * 3000," paga c/u a 3000" 
+		5,6,7,8,9,10:
+			Escribir "El monto a pagar es $",llantas * 2500," paga c/u a 2500"
+		De Otro Modo:
+			Si llantas > 10 Entonces
+				Escribir "El monto a pagar es $",llantas * 2000," paga c/u a 2000"
+			Fin Si
+	Fin Segun
+FinAlgoritmo

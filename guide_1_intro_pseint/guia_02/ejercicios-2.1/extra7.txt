@@ -1,0 +1,16 @@
+Algoritmo extra7
+	
+	Definir num Como Entero
+	Definir cad1 Como Caracter
+	Escribir "Ingrese un numero entero cualquiera"
+	Leer num
+	
+	cad1 = ConvertirATexto(num)
+	
+	Si (Longitud(cad1) = 3 ) Entonces
+		Escribir "El numero es de ",Longitud(cad1)," tiene 3 digitos"
+	SiNo
+		Escribir "El numero ",Longitud(cad1)," no tiene 3 digitos"
+	Fin Si
+	
+FinAlgoritmo

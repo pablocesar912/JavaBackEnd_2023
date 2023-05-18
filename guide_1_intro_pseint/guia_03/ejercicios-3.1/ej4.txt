@@ -1,0 +1,18 @@
+Algoritmo ej4
+	
+	Definir cont Como Entero
+	Definir clave Como Caracter
+	cont=1
+	Repetir
+		Escribir "<<<<<Intento",cont,">>>>>"
+		Escribir "Ingrese la clave"
+		Leer clave
+		cont=cont+1
+		Si clave="eureka" Entonces
+			Escribir "Clave ingresada correctamente"
+		FinSi
+	Mientras Que clave<>"eureka" y cont<=3
+	Si cont>=3 Entonces
+		Escribir "<<<<<Agoto el numero de intento>>>>>"
+	FinSi
+FinAlgoritmo

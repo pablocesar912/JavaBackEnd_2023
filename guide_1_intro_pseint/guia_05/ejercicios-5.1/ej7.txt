@@ -1,0 +1,54 @@
+Algoritmo sin_titulo
+	Definir tam Como Entero
+	Escribir "Ingrese el tamaño del vector"
+	Leer tam
+	genera(tam)
+FinAlgoritmo
+SubProceso genera(tam)
+	Definir v1,v2,i Como Entero
+	Dimension v1(tam),v2(tam)
+	Para i<-0 Hasta (tam-1) Con Paso 1 Hacer
+		v1[i]=azar(10)
+		v2[i]=azar(10)
+	FinPara
+	Para i<-0 Hasta (tam-1) Con Paso 1 Hacer
+		Escribir Sin Saltar "[",v1[i],"]"
+	FinPara
+	Escribir ""
+	Para i<-0 Hasta (tam-1) Con Paso 1 Hacer
+		Escribir Sin Saltar "[",v2[i],"]"
+	FinPara
+	Escribir ""
+	
+	Si comparar(v1,v2,tam)=0 Entonces
+		Escribir "Los 2 vectores tiene variables iguales"
+	SiNo
+		Si comparar(v1,v2,tam)=1 Entonces
+			Escribir "Uno de los vectores tiene las varible distinta y otra variables iguales"
+		SiNo
+			Si comparar(v1,v2,tam)=2 Entonces
+				Escribir "Los 2 vectores tiene variables distinta"
+			FinSi
+		FinSi
+	FinSi
+FinSubProceso
+
+Funcion ver=comparar(v1,v2,tam)
+	Definir ver,i,band1,band2 Como Entero
+	band1=0
+	band2=0
+	Para i<-0 Hasta (tam-1) Con Paso 1 Hacer
+		Si v1[0]<>v1[i] Entonces
+			band1=1
+			i=tam-1
+		FinSi
+	FinPara
+	Para i<-0 Hasta (tam-1) Con Paso 1 Hacer
+		Si v2[0]<>v1[i] Entonces
+			band2=1
+			i=tam-1
+		FinSi
+	FinPara
+	ver=band1+band2
+FinFuncion
+	

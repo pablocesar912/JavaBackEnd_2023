@@ -1,0 +1,24 @@
+Algoritmo ej2
+	
+	Definir lim,sum,dat Como Entero
+	sum=0
+	Escribir "Ingrese limite para la suma"
+	Leer lim
+	
+	Mientras sum<lim Hacer
+		Escribir "Ingrese numero"
+		Leer dat
+		
+		Si dat>lim Entonces
+			Escribir "La suma sobrepaso al limite establecido: ",dat
+			sum=lim
+		SiNo
+			sum=sum+dat
+			Si sum>lim Entonces
+				Escribir "La suma sobrepaso al limite establecido: ",sum
+			FinSi
+		FinSi
+		
+	Fin Mientras
+	
+FinAlgoritmo

@@ -1,0 +1,24 @@
+Algoritmo ej2
+	Definir v,i,suma,mult,resta Como Entero
+	suma=0
+	resta=0
+	mult=1
+		Escribir "Ingrese 10 valores"
+		Dimension v(10)
+		Para i<-0 Hasta 9 Con Paso 1 Hacer
+			Leer v(i)
+		Fin Para
+		Escribir "Los valores ingresados son:"
+		Para i<-0 Hasta 4 Con Paso 1 Hacer
+			Escribir Sin Saltar "[",v[i],"]"
+		Fin Para
+		Escribir ""
+		Para i<-0 Hasta 9 Con Paso 1 Hacer
+			suma=suma+v[i]
+			mult=mult*v[i]
+			resta=resta-v[i]
+		Fin Para
+		Escribir "Suma= ",suma
+		Escribir "mult=",mult
+		Escribir "resta= ",resta
+FinAlgoritmo

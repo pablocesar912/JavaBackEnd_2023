@@ -1,0 +1,29 @@
+Algoritmo ej10
+	
+	Definir i,j,v,n Como Entero
+	Definir mv,cm,sb,scm Como Real
+	Escribir "Ingrese la cantidad de vendedores"
+	Leer n
+	
+	Para i<-1 Hasta n Con Paso 1 Hacer
+		Escribir "Vendedor ",i
+		Escribir "Ingrese la cantidad de ventas que realizo en la semana"
+		Leer v
+		
+		cm=0
+		scm=0
+		
+		Para j<-1 Hasta v Con Paso 1 Hacer
+			Escribir Sin Saltar"Ingrese el monto de la venta ",j,": $"
+			Leer mv
+			cm=(mv*10)/100
+			scm=scm+cm
+		Fin Para
+		Escribir Sin Saltar"Ingrese el sueldo base: $"
+		Leer sb
+		Escribir"La comision del vendedor de esta semana ",i," es: $",scm
+		Escribir"El sueldo total de esta semana es: $",sb+scm
+		Escribir ""
+	Fin Para
+	
+FinAlgoritmo

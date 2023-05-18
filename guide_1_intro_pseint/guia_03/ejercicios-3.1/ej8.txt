@@ -1,0 +1,50 @@
+Algoritmo ej8
+	
+	Definir cant,i,cont,a Como Entero
+	Definir intr,exposc,parc,nf,n1,n2,n3,mayor,p Como Real
+	a=0
+	cont=0
+	Escribir "Ingrese el Numero de estudiantes"
+	Leer cant
+	Escribir ""
+	
+	Para i<-1 Hasta cant Con Paso 1 Hacer
+		Escribir "Ingrese la nota del Estudiando ",i
+		Escribir "*Integrador - *Exposicion - *Parcial"
+		Leer intr,exposc,parc
+		
+		n1=(35*intr)/100
+		n2=(25*exposc)/100
+		n3=(40*parc)/100
+		nf=n1+n2+n3
+		
+		Si nf<6.5 Entonces
+			Escribir "El estudiante ",i," REPRUEBA el curso"
+			Escribir ""
+		SiNo
+			Escribir "El estudiante ",i," APRUEBA el curso"
+			Escribir ""
+		FinSi
+		
+		Si intr>7.5 Entonces
+			cont=cont+1
+		FinSi
+		
+		Si contador=0 Entonces
+			mayor=exposc
+		SiNo
+			Si exposc>mayor
+				mayor=exposc
+			FinSi
+		FinSi
+		
+		Si (parc<7.5) y (parc>4.0) Entonces
+			a=a+1
+		FinSi
+	Fin Para
+	
+	p=(cont/cant)*100
+	Escribir "El porcentaje de estudiantes con integrador mayor de 7.5 es: ",p
+	Escribir "La mayor nota obtenida en exposiciones es: ",mayor
+	Escribir "El total de estudiantes que obtuvieron un parcial entre 4.0 y 7.5 es ",a
+FinAlgoritmo

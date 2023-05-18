@@ -1,0 +1,182 @@
+Algoritmo LABERINTO_EGG
+	Definir tam,i,j Como Entero
+	i=0;j=0
+	Definir m,opc,D Como Caracter
+	INTRO()
+	Repetir
+		Escribir "ELIJA EL TAMAÑO DEL LABERINTO (2 min o 30 MAX)"
+		Leer tam
+	Mientras Que tam<2 o tam>30
+	Limpiar Pantalla
+	Dimension m[tam,tam],D[5,5]
+	cargarmartriz(m,tam)
+	Repetir
+		mostramatriz(m,tam)
+		Escribir "D=(Derecha) , A=(Izquierda) , W=(Subir) , S=(Bajar), E=(Exit)"
+		Leer opc
+		opc=Mayusculas(opc)
+		cambiar(m,opc,tam,i,j)
+		Segun opc Hacer
+			"D":
+				si j<(tam-1) Entonces
+					Si m[i,j+1]<>"#" Entonces
+						j=j+1
+					FinSi
+				FinSi
+			"A":
+				si j>0 Entonces
+					Si m[i,j-1]<>"#" Entonces
+						j=j-1
+					FinSi
+				FinSi
+			"W":
+				si i>0 Entonces
+					Si m[i-1,j]<>"#" Entonces
+						i=i-1
+					FinSi
+				FinSi
+			"S":
+				si i<(tam-1) Entonces
+					Si m[i+1,j]<>"#" Entonces
+						i=i+1
+					FinSi
+				FinSi
+		Fin Segun
+		Si m[tam-1,tam-1]="O" Entonces
+			opc="E" 
+		FinSi
+		Limpiar Pantalla
+	Mientras Que opc<>"E" 
+	GAMEOVER(D)
+FinAlgoritmo
+
+SubProceso cargarmartriz(m,tam)
+	Definir i,j,a,b,k Como Entero
+	Para i<-0 Hasta tam-1 Con Paso 1 Hacer
+		Para j<-0 Hasta tam-1 Con Paso 1 Hacer
+			Si i=0 y j=0 Entonces
+				m[i,j]="O"
+			SiNo
+				m[i,j]="_"
+			FinSi
+			Si i=tam-1 y j=tam-1 Entonces
+				m[i,j]="!!META!!"
+			FinSi
+		Fin Para
+	Fin Para
+	k=tam-1
+	Para i<-0 Hasta (k) Con Paso 1 Hacer
+		a=Aleatorio(0,k)
+		b=Aleatorio(0,k)
+		si (a<>0 y b<>0) Entonces
+			m[a,b]="#"
+			Si (a=k y b=k) Entonces
+				m[a,b]="!!META!!"
+			FinSi
+		FinSi
+	Fin Para
+FinSubProceso
+
+SubProceso mostramatriz(m,tam)
+	Escribir "LABERINTO NIVEL ",tam
+	Definir i,j Como Entero
+	Para i<-0 Hasta tam-1 Con Paso 1 Hacer
+		Para j<-0 Hasta tam-1 Con Paso 1 Hacer
+			Escribir Sin Saltar m[i,j]," "
+		Fin Para
+		Escribir ""
+	Fin Para
+FinSubProceso
+
+SubProceso cambiar(m,opc,tam,i,j)	
+	Segun Mayusculas(opc) Hacer
+		"D":
+			si j<(tam-1) Entonces
+				m[i,j]="o"
+				Si m[i,j+1]<>"#" Entonces
+					m[i,j+1]="O"
+				SiNo
+					m[i,j]="O"
+				FinSi
+			FinSi
+		"A":
+			si j>0 Entonces
+				m[i,j]="o"
+				Si m[i,j-1]<>"#" Entonces
+					m[i,j-1]="O"
+				SiNo
+					m[i,j]="O"
+				FinSi
+			FinSi
+		"W":
+			si i>0 Entonces
+				m[i,j]="o"
+				Si m[i-1,j]<>"#" Entonces
+					m[i-1,j]="O"
+				SiNo
+					m[i,j]="O"
+				FinSi
+			FinSi
+		"S":
+			si i<(tam-1) Entonces
+				m[i,j]="o"
+				Si m[i+1,j]<>"#" Entonces
+					m[i+1,j]="O"
+				SiNo
+					m[i,j]="O"
+				FinSi
+			FinSi
+	Fin Segun
+FinSubProceso
+
+SubProceso Dibujo(D)
+	Definir i,j Como Entero
+	Para i<-0 Hasta 4 Con Paso 1 Hacer
+		Para j<-0 Hasta 4 Con Paso 1 Hacer
+			si (i=0 y j=2) o (i=1 y j>=1 y j<4) o (i=4 y j>=1 y j<4) Entonces
+				D[i,j]="O"
+			SiNo
+				si i=2 o i=3 Entonces
+					D[i,j]="O"
+				SiNo
+					D[i,j]=" "
+				FinSi
+			FinSi
+		Fin Para
+	Fin Para
+	Para i<-0 Hasta 4 Con Paso 1 Hacer
+		Para j<-0 Hasta 4 Con Paso 1 Hacer
+			Si j=0 Entonces
+				Escribir Sin Saltar"                          ***  ",D[i,j]
+			SiNo
+				Si j=4 Entonces
+					Escribir Sin Saltar" ",D[i,j],"  ***                     "
+				SiNo
+					Escribir Sin Saltar" ",D[i,j]
+				FinSi
+				
+			FinSi
+		Fin Para
+		Escribir ""
+	Fin Para
+FinSubProceso
+
+SubProceso INTRO()
+	Escribir "   0  "
+	Escribir " 0 0 0        BIENVENIDO A EL JUEGO DEL LABERINTO"
+	Escribir "0 0 0 0         ¿ESTAS LISTO PARA ESTE DESAFIO?"
+	Escribir "0 0 0 0      PRESIONE CUALQUIER LETRA PARA COMENZAR"
+	Escribir " 0 0 0 "
+	Esperar Tecla
+FinSubProceso
+
+SubProceso GAMEOVER(D)
+	Escribir Sin Saltar ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>> FELICIDADES <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+	Escribir "                          *** *** *** *** ***"
+	Dibujo(D)
+	Escribir "                          *** *** *** *** ***"
+	Escribir ">>>>>>>>>>>>>>>>> MUCHAS GRACIAS POR JUGAR AL LABERINTO <<<<<<<<<<<<<<<<<"
+	Escribir ">>>>>>>>>>>>>>>>> PRESIONE CUALQUIER TECLA PARA SALIR.......... <<<<<<<<<"
+	Esperar Tecla
+FinSubProceso
+	

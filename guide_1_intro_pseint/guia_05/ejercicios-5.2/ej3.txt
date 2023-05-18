@@ -1,0 +1,35 @@
+Algoritmo ej3
+	Definir v,n,m Como Entero
+	Escribir "Ingrese el tamaño de la fila"
+	Leer n
+	Escribir "Ingrese el tamaño de la columna"
+	Leer m
+	Dimension v[n,m]
+	crear(v,n,m)
+	ver(v,n,m)
+FinAlgoritmo
+
+SubProceso crear(v,n,m)
+	Definir i,j Como Entero
+	Para i<-0 Hasta n-1 Con Paso 1 Hacer
+		Para j<-0 Hasta m-1 Con Paso 1 Hacer
+			v[i,j]=Aleatorio(0,9)
+		Fin Para
+	Fin Para
+FinSubProceso
+
+SubProceso ver(v,n,m)
+	Definir i,j,suma Como Entero
+	suma=0
+	Escribir "La matriz generada"
+	Para i<-0 Hasta n-1 Con Paso 1 Hacer
+		Para j<-0 Hasta m-1 Con Paso 1 Hacer
+			Escribir Sin Saltar v[i,j]," "
+			suma=suma+v[i,j]
+		Fin Para
+		Escribir ""
+	Fin Para
+	Escribir ""
+	Escribir "La suma de todos los elementos de la Matriz es:",suma
+FinSubProceso
+	

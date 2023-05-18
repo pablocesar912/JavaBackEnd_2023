@@ -1,0 +1,17 @@
+Algoritmo extr6
+	Definir n Como Entero
+	Escribir "Ingrese numero de cifras"
+	Leer n
+	Escribir "la suma de los digitos es: ",suma(n)
+FinAlgoritmo
+Funcion r=suma(n)
+	Definir r,a,b Como Real
+	r=0
+	b=n
+	Repetir
+		a=trunc(b MOD 10)
+		b=trunc(b/10)
+		r=r+a
+	Mientras Que b>10
+	r=r+b
+FinFuncion

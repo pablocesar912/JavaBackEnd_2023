@@ -1,0 +1,36 @@
+SubProceso  subproc(a,b,c,d)
+	a=a+a
+	b=b+b
+	c=c*c
+	d=d*d
+	Escribir "El resultado en subproc de a+b: ",a+b
+	Escribir "El resultado en subproc de c+d: ",c+d
+FinSubProceso
+	
+Funcion resultado <- sumadecuadrado(a,b,c,d)
+	Definir resultado Como Real
+	a=a*a
+	b=b*b
+	resultado=a+b
+Fin Funcion
+
+Funcion resultado <- scpr (a Por Referencia,b)
+	Definir resultado Como Real
+	a=a*a
+	b=b*b
+	resultado=a+b
+Fin Funcion
+
+
+Algoritmo prueba2
+	
+	Definir a,b,c,d Como Real
+	
+	Escribir "Ingrese variables"
+	Leer a,b,c,d
+	Escribir "La suma de funcion por valor: ",sumadecuadrado(a,b,c,d)
+	Escribir "la suma de funcion por referencia: ",scpr(a,b)
+	Escribir "El valor de a es: ",a
+	subproc(a,b,c,d)
+	
+FinAlgoritmo

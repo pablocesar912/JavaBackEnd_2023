@@ -1,0 +1,25 @@
+Algoritmo ej13
+	
+	Definir a,b Como Entero
+	Escribir "Ingrese la cantidad de tornillos con defecto del operario"
+	Leer a
+	Escribir "Ingrese la cantidad de tornillos sin defecto del operario"
+	Leer b
+	
+	Si no(a < 200) y no(b > 1000) Entonces
+		Escribir "Grado 5"
+	SiNo
+		Si (a < 200) y no(b > 1000) Entonces
+			Escribir "Grado 6"
+		SiNo
+			Si no(a < 200) y (b > 1000) Entonces
+				Escribir "Grado 7"
+			SiNo
+				Si (a < 200) y (b > 1000) Entonces
+					Escribir "Grado 8"
+				Fin Si
+			Fin Si
+		Fin Si
+	Fin Si
+	
+FinAlgoritmo

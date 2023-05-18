@@ -1,0 +1,22 @@
+Algoritmo extr4
+	
+	Definir name Como Caracter
+	Definir n1,n2,n3,i,nf Como Real
+	i=1
+	Escribir "Ingrese el nombre del estudiante ",i
+	Leer name
+	
+	Mientras name<>" " Hacer
+		Escribir "Ingrese las nota del estudiante"
+		Escribir "Parte practica-Parte problemas-Parte teorica"
+		Leer n1,n2,n3
+		Si (n1>=0 y n1<=10) y (n2>=0 y n2<=10) y (n3>=0 y n3<=10) Entonces
+			nf=(0.1*n1)+(0.5*n2)+(0.4*n3)
+			Escribir "Su nota final es: ",nf
+		SiNo
+			Escribir "Las Notas ingresadas son erroneas"
+		FinSi
+		Escribir "Ingrese el nombre del estudiante ",i
+		Leer name
+	Fin Mientras
+FinAlgoritmo

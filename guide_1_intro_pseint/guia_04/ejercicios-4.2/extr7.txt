@@ -1,0 +1,31 @@
+Algoritmo extr7
+	Definir n,r,i,x,g Como Entero
+	r=1
+	i=0
+	x=0
+	n=0
+	Escribir "Ingrese el hasta que valor se hara la serie fIbonacci"
+	g=ingreso(n)
+	Repetir
+		x=fibo(r,i)
+		r=i
+		i=x
+		Escribir Sin Saltar r," "
+	Mientras Que g>r
+	Si g=1 Entonces
+		Escribir r
+	FinSi
+	Escribir ""
+FinAlgoritmo
+
+Funcion g=ingreso(n Por Valor)
+	Definir g Como Entero
+	Leer n
+	g=n
+FinFuncion
+
+Funcion f=fibo(r,i)
+	Definir f Como Entero
+	f=r+i
+FinFuncion
+	

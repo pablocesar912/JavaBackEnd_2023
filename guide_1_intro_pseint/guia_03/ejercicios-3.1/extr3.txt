@@ -1,0 +1,21 @@
+Algoritmo extr3
+	
+	Definir n1,n2,n,mayor Como Real
+	Definir i Como Entero
+	i=1
+	Escribir "Ingrese el numero decimal ",i
+	Leer n1
+	i=i+1
+	Escribir "Ingrese el numero decimal ",i
+	Leer n2
+	
+	Mientras n2>n1 Hacer
+		i=i+1
+		Escribir "Ingrese el numero decimal ",i
+		Leer n
+		Si n<n2
+			n2=n1
+		FinSi
+	Fin Mientras
+	
+FinAlgoritmo

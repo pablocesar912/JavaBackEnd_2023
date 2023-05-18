@@ -1,0 +1,19 @@
+Algoritmo extra1
+	
+	Definir n1,n2,n3,prom Como Real
+	Escribir "Ingrese las notas del alumno"
+	Escribir "1ra nota: "
+	Leer n1
+	Escribir "2da nota: "
+	Leer n2
+	Escribir "3ra nota:"
+	Leer n3
+	
+	prom = (n1+n2+n3)/3
+	
+	Si (prom >= 70) Entonces
+		Escribir "Felicidades Aprobo la materia"
+	SiNo
+		Escribir "Estamos en el horno,broh"
+	Fin Si
+FinAlgoritmo

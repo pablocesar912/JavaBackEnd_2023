@@ -1,0 +1,15 @@
+Algoritmo extra2
+	
+	Definir area,perimetro,base,altura Como Real
+	Escribir "Ingrese la base del rectangulo (m)"
+	Leer base
+	
+	Escribir "Ingrese la altura del rectangulo (m)"
+	Leer altura
+	
+	area = base * altura
+	perimetro = (2 * altura) + (2 * base)
+	
+	Escribir "El area del rectangulo es ",area," m2"
+	Escribir "El perimetro del rectangulo es ",perimetro," m"
+FinAlgoritmo

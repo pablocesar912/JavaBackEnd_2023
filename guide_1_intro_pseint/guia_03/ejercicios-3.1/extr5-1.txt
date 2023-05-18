@@ -1,0 +1,14 @@
+Algoritmo extr5
+	
+	Definir cad1,cad2 Como Caracter
+	cad2="0"
+	Escribir "Ingrese numero"
+	Leer cad1
+	
+	si cad1 < cad2 Entonces
+		Escribir "El numero ingresado es negativo"
+	SiNo
+		Escribir "La cantidad de digitos del numero es ",Longitud(cad1)
+	FinSi
+	
+FinAlgoritmo

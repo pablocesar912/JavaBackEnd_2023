@@ -1,0 +1,13 @@
+Algoritmo ej1
+	
+	Definir nota Como Entero
+	
+	Escribir "INGRESE NOTA"
+	Leer nota
+	
+	Mientras (nota<0) o (nota>10) Hacer
+		Escribir "INGRESE NOTA"
+		Leer nota
+	Fin Mientras
+	
+FinAlgoritmo

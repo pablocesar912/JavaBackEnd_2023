@@ -1,0 +1,15 @@
+Algoritmo programa3
+	
+	Definir promedio,super1,super2,super3 Como Real
+	
+	Escribir "Ingrese el precio del supermercado 1"
+	Leer super1
+	Escribir "Ingrese el precio del supermercado 2"
+	Leer super2
+	Escribir "Ingrese el precio del supermercado 3"
+	Leer super3
+	
+	promedio = (super1 + super2 + super3)/3
+	Escribir "el promedio del producto es ",promedio 
+	
+FinAlgoritmo

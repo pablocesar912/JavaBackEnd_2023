@@ -1,0 +1,21 @@
+SubProceso cambio(n1,n2)
+	Definir aux Como Real
+	aux=n1
+	n1=n2
+	n2=aux
+	Escribir "El intercambio queda:"
+	Escribir "n1 = ",n1
+	Escribir "n2 = ",n2
+FinSubProceso
+
+Algoritmo ej1
+	
+	Definir n1,n2 Como Real
+	Escribir "Ingrese 2 numeros"
+	Leer n1,n2
+	Escribir "Numeros ingresados:"
+	Escribir "n1 = ",n1
+	Escribir "n2 = ",n2
+	cambio(n1,n2)
+	
+FinAlgoritmo

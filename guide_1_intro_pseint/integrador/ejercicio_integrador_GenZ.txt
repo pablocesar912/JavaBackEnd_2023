@@ -1,0 +1,216 @@
+Algoritmo ZOMBIE_EGG
+	Definir muestra,m Como Caracter
+	Definir l,verif,r,d1,c1,i Como Entero
+	i=0
+	Dimension m[37,37]
+	Repetir
+		Si i=0 Entonces
+			Repetir
+				Escribir "INGRESE LAS MUESTRA(DEBEN TENER LOS 4 CARACTER A,B,C,D)"
+				Leer muestra
+				l=Longitud(muestra)
+			Mientras Que (l<9)
+		SiNo
+			Escribir "INGRESO UN SOLO CARACTER DE LOS 4 INDICADOS"
+			Escribir "RECUERDE QUE SE TOMARA LOS PRIMEROS 9 CARACTERES DE LAS MUESTAS MENORES A 16 INGRESADO"
+			Escribir "RECUERDE QUE SE TOMARA LOS PRIMEROS 16 CARACTERES DE LAS MUESTAS MAYORES A 16 Y MENORES DE 1369 INGRESADO"
+			Repetir
+				Escribir "INGRESE LAS MUESTRA(DEBEN TENER LOS 4 CARACTER A,B,C,D)"
+				Leer muestra
+				l=Longitud(muestra)
+			Mientras Que (l<9)
+		FinSi
+		
+		si l<16 Entonces
+			verif=matriz3x3(m,muestra)
+			d1=diagonal3(m)
+			c1=contradiag3(m)
+			r=d1+c1
+		SiNo
+			verif=matriz16x16(l,m,muestra)
+			d1=diagonal4(m)
+			c1=contradiag4(m)
+			r=d1+c1
+		FinSi
+		Escribir "MUESTRA ",verif
+		Escribir d1,c1
+		i=i+1
+		Limpiar Pantalla
+	Mientras Que verif<>4
+	Escribir "Su resultado es.................."
+	Esperar 5 Segundos
+	Si r=6 o r=8 Entonces
+		Escribir "POSITIVO ( + )"
+		Escribir "Eres portador del GEN Z"
+	SiNo
+		Escribir "NEGATIVO ( - )"
+		Escribir "No eres portador del GEN Z"
+	FinSi
+FinAlgoritmo
+//-----------------------------------------------//
+Funcion v1=matriz3x3(m,muestra)
+	Definir i,j,k,A,B,C,D,v1 Como Entero
+	k=0;A=0;B=0;C=0;D=0
+	Para i<-0 Hasta 2 Con Paso 1 Hacer
+		Para j<-0 Hasta 2 Con Paso 1 Hacer
+			si k<9 Entonces
+				m[i,j]=SubCadena(muestra,k,k)
+				Segun m[i,j] Hacer
+					"A":
+						A=1
+					"B":
+						B=1
+					"C":
+						C=1
+					"D":
+						D=1
+				Fin Segun
+				k=k+1
+			FinSi
+		Fin Para
+	Fin Para
+	v1=A+B+C+D
+	Escribir "Analizando..........."
+	Esperar 5 Segundos
+	Escribir "TOMAMOS LA SIGUENTE MUESTRA DE LO INGRESADO"
+	frase3x3(m)
+	Escribir""
+	Si v1=4 Entonces
+		Escribir"[LA MATRIZ A EVALUAR]"
+		orden3(m)
+	FinSi
+	Esperar 5 Segundos
+	Escribir ""
+FinFuncion
+//-----------------------------------------------//
+Funcion v2=matriz16x16(l,m,muestra)
+	Definir i,j,k,A,B,C,D,v2 Como Entero
+	k=0;A=0;B=0;C=0;D=0
+	si l>=16 y l<1369 Entonces
+		Para i<-0 Hasta 3 Con Paso 1 Hacer
+			Para j<-0 Hasta 3 Con Paso 1 Hacer
+				si k<16 Entonces
+					m[i,j]=SubCadena(muestra,k,k)
+					Segun m[i,j] Hacer
+						"A":
+							A=1
+						"B":
+							B=1
+						"C":
+							C=1
+						"D":
+							D=1
+					Fin Segun
+					k=k+1
+				FinSi
+			Fin Para
+		Fin Para
+	FinSi
+	v2=A+B+C+D
+	Escribir "Analizando..........."
+	Esperar 5 Segundos
+	Escribir "TOMAMOS LA SIGUENTE MUESTRA DE LO INGRESADO"
+	frase4x4(m)
+	Escribir ""
+	Si v2=4 Entonces
+		Escribir"LA MATRIZ A EVALUAR"
+		orden4(m)
+	FinSi
+	Esperar 5 Segundos
+	Escribir ""
+FinFuncion
+//-----------------------------------------------//
+SubProceso orden3(m)
+	Definir i,j Como Entero
+	Para i<-0 Hasta 2 Con Paso 1 Hacer
+		Para j<-0 Hasta 2 Con Paso 1 Hacer
+			Escribir Sin Saltar m[i,j]," "
+		Fin Para
+		Escribir ""
+	Fin Para
+FinSubProceso
+//-----------------------------------------------//
+SubProceso frase3x3(m)
+	Definir i,j Como Entero
+	Para i<-0 Hasta 2 Con Paso 1 Hacer
+		Para j<-0 Hasta 2 Con Paso 1 Hacer
+			Escribir Sin Saltar "[",m[i,j],"] "
+		Fin Para
+	Fin Para
+FinSubProceso
+//-----------------------------------------------//
+SubProceso orden4(m)
+	Definir i,j Como Entero
+	Para i<-0 Hasta 3 Con Paso 1 Hacer
+		Para j<-0 Hasta 3 Con Paso 1 Hacer
+			Escribir Sin Saltar m[i,j]," "
+		Fin Para
+		Escribir ""
+	Fin Para
+FinSubProceso
+//-----------------------------------------------//
+SubProceso frase4x4(m)
+	Definir i,j Como Entero
+	Para i<-0 Hasta 3 Con Paso 1 Hacer
+		Para j<-0 Hasta 3 Con Paso 1 Hacer
+			Escribir Sin Saltar "[",m[i,j],"] "
+		Fin Para
+	Fin Para
+FinSubProceso
+//-----------------------------------------------//
+Funcion d=diagonal3(m)
+	Definir i,j,d Como Entero
+	d=0
+	Para i<-0 Hasta 2 Con Paso 1 Hacer
+		Para j<-0 Hasta 2 Con Paso 1 Hacer
+			Si i=j Entonces
+				Si m[0,0]=m[i,j] Entonces
+					d=d+1
+				FinSi
+			FinSi
+		Fin Para
+	FinPara
+FinFuncion
+//-----------------------------------------------//
+Funcion c=contradiag3(m)
+	Definir i,j,c Como Entero
+	c=0
+	Para i<-0 Hasta 2 Con Paso 1 Hacer
+		Para j<-0 Hasta 2 Con Paso 1 Hacer
+			Si i+j=3-1 Entonces
+				Si m[i,j]=m[0,2] Entonces
+					c=c+1
+				FinSi
+			FinSi
+		Fin Para
+	FinPara
+FinFuncion
+//-----------------------------------------------//
+Funcion d=diagonal4(m)
+	Definir i,j,d Como Entero
+	d=0
+	Para i<-0 Hasta 3 Con Paso 1 Hacer
+		Para j<-0 Hasta 3 Con Paso 1 Hacer
+			Si i=j Entonces
+				Si m[i,j]=m[0,0] Entonces
+					d=d+1
+				FinSi
+			FinSi
+		Fin Para
+	FinPara
+FinFuncion
+//-----------------------------------------------//
+Funcion c=contradiag4(m)
+	Definir i,j,c Como Entero
+	c=0
+	Para i<-0 Hasta 3 Con Paso 1 Hacer
+		Para j<-0 Hasta 3 Con Paso 1 Hacer
+			Si i+j=4-1 Entonces
+				Si m[i,j]=m[0,3] Entonces
+					c=c+1
+				FinSi
+			FinSi
+		Fin Para
+	FinPara
+FinFuncion
+	

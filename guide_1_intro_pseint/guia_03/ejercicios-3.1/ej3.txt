@@ -1,0 +1,22 @@
+Algoritmo ej3
+	
+	Definir n1,cont,sum,i Como Entero
+	Definir prom Como Real
+	n1=0
+	cont=0
+	sum=0
+	i=1
+	Mientras (n1>-1) Hacer
+		Escribir "Ingrese numero ",i
+		Leer n1
+		Si n1>=0 Entonces
+			sum=sum+n1
+			cont=cont+1
+			prom=sum/cont
+			i=i+1
+		SiNo
+			Escribir "Finaliza el ingreso de numero"
+		FinSi
+	Fin Mientras
+	Escribir "El promedio de la secuencia ingresada es: ",prom
+FinAlgoritmo

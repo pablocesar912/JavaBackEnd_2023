@@ -1,0 +1,42 @@
+//Escriba un programa que pida 3 notas y valide si esas notas están entre 1 y 10. Si están
+//entre esos parámetros se debe poner en verdadero una variable de tipo lógico y si no
+//ponerla en falso. Al final el programa debe decir si las 3 notas son correctas usando la
+//variable de tipo lógico.
+
+Algoritmo ej8
+	Definir not1,not2,not3 Como Logico
+	Definir cad1,cad2,cad3 Como Logico
+	Definir l Como Entero
+	
+	Escribir "Ingrese la nota1"
+	Leer not1
+	Escribir "Ingrese la nota2"
+	Leer not2
+	Escribir "Ingrese la nota2"
+	Leer not3
+	
+	cad1=SubCadena(not1,0,10)
+	cad2=SubCadena(not2,1,10)
+	cad3=SubCadena(not3,1,10)
+	
+	Escribir "cad1 ",cad1
+	
+	Si not1 = cad1  Entonces
+		Escribir "CORRECTO"
+	SiNo
+		Escribir "INCORRECTO"
+	Fin Si
+	
+	Si not2 = cad2  Entonces
+		Escribir "CORRECTO"
+	SiNo
+		Escribir "INCORRECTO"
+	Fin Si
+	
+	Si not3 = cad3  Entonces
+		Escribir "CORRECTO"
+	SiNo
+		Escribir "INCORRECTO"
+	Fin Si
+	
+FinAlgoritmo

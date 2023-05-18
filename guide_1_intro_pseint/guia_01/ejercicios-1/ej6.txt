@@ -1,0 +1,19 @@
+Algoritmo programa6
+	
+	Definir variable1,variable2,auxiliar Como Entero
+	
+	Escribir "Ingrese la numero 1"
+	Leer variable1
+	
+	Escribir "Ingrese la numero 2"
+	Leer variable2
+	
+	auxiliar=variable1
+	
+	variable1=variable2
+	variable2=auxiliar
+	
+	Escribir "numero 1 es ",variable1
+	Escribir "numero 2 es ",variable2
+	
+FinAlgoritmo

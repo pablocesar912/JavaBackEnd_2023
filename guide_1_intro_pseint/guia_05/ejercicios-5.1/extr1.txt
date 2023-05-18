@@ -1,0 +1,17 @@
+Algoritmo ext1
+	Definir i,v1,v2 Como Entero
+	Escribir "Se cargara 2 vetores "
+	Dimension v1[5],v2[5]
+	Para i<-0 Hasta 4 Con Paso 1 Hacer
+		v1[i]=Azar(10)
+		v2[i]=Azar(10)
+	Fin Para
+	Para i<-0 Hasta 4 Con Paso 1 Hacer
+		Escribir Sin Saltar"[",v1[i],"]"
+	Fin Para
+	Escribir ""
+	Para i<-0 Hasta 4 Con Paso 1 Hacer
+		Escribir Sin Saltar"[",v2[i],"]"
+	Fin Para
+	Escribir ""
+FinAlgoritmo

@@ -1,0 +1,62 @@
+Algoritmo extra11
+	
+	Definir n1,n2,n3,n4,menor Como Entero
+	Definir Prom Como Real
+	Escribir "Ingrese las nota 1"
+	Leer n1
+	Escribir "Ingrese la nota 2"
+	Leer n2
+	
+	Si n1<n2 Entonces
+		menor=n1
+		Escribir "Ingrese la nota 3"
+		Leer n3
+		Si menor<n3 Entonces
+			menor=menor
+			Escribir "Ingrese la nota 4"
+			Leer n4
+			Si menor<n4 Entonces
+				menor=menor
+			SiNo
+				menor=n4
+			FinSi
+		SiNo
+			menor=n3
+			Escribir "Ingrese la nota 4"
+			Leer n4
+			Si menor<n4 Entonces
+				menor=menor
+			SiNo
+				menor=n4
+			FinSi
+		FinSi
+	SiNo
+		menor=n2
+		Escribir "Ingrese la nota 3"
+		Leer n3
+		Si menor<n3 Entonces
+			menor=menor
+			Escribir "Ingrese la nota 4"
+			Leer n4
+			Si menor<n4 Entonces
+				menor=menor
+			SiNo
+				menor=n4
+			FinSi
+		SiNo
+			menor=n3
+			Escribir "Ingrese la nota 4"
+			Leer n4
+			Si menor<n4 Entonces
+				menor=menor
+			SiNo
+				menor=n4
+			FinSi
+		FinSi
+	FinSi
+	Escribir "El menor es: ",menor
+	Prom = (n1+n2+n3+n4-menor)/3
+	
+	Escribir "El promedio es: ",Prom
+	
+FinAlgoritmo

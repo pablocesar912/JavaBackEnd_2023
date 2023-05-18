@@ -1,0 +1,20 @@
+SubProceso restasucesiva(r,n2)
+	Definir i Como Entero
+	i=0
+	Repetir
+		r=r-n2  
+		i=i+1
+	Mientras Que r>=n2 
+	Escribir "El resto es :",r
+	Escribir "El cociente es: ",i
+FinSubProceso
+
+Algoritmo ej3
+	Definir n1,n2,r Como Entero
+	Escribir "Ingrese dividendo"
+	Leer n1
+	Escribir "Ingrese divisor"
+	Leer n2
+	r=n1
+	restasucesiva(r,n2)
+FinAlgoritmo

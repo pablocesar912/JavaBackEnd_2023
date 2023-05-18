@@ -1,0 +1,45 @@
+Algoritmo extra6
+	
+	Definir dia,mes,year Como Entero
+	Escribir "Ingrese dia"
+	Leer dia
+	dia=abs(dia)
+	
+	Si (dia <=31) y (dia<>0) Entonces
+		Escribir "Ingrese mes"
+		Leer mes
+		Escribir "Ingrese año"
+		Leer year
+	SiNo
+		mes=20
+	Fin Si
+	
+	Segun mes Hacer
+		1:
+			Escribir dia," de Enero de ",year
+		2:
+			Escribir dia," de Febrero de ",year
+		3:
+			Escribir dia," de Marzo de ",year
+		4:
+			Escribir dia," de Abril de ",year
+		5:
+			Escribir dia," de Mayo de ",year
+		6:
+			Escribir dia, "de Junio de ",year
+		7:
+			Escribir dia," de Julio de ",year
+		8:
+			Escribir dia,"de Agosto de ",year
+		9:
+			Escribir dia," de septiembre de ",year
+		10:
+			Escribir dia," de Octubre de ",year
+		11:
+			Escribir dia," de Noviembre de ",year
+		12:
+			Escribir dia," de Diciembre de ",year
+		De Otro Modo:
+			Escribir"Varible ingresada incorrecta" 
+	Fin Segun
+FinAlgoritmo

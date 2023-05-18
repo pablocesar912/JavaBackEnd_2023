@@ -1,0 +1,22 @@
+Funcion result <- tm(mayor,menor)
+	Definir result Como Real
+	result=(mayor+menor)/2
+Fin Funcion
+
+Algoritmo ej2
+	
+	Definir dias,mayor,menor,i Como Real
+	Escribir "Ingrese la cantidad de dias"
+	Leer dias
+	
+	Para i<-1 Hasta dias Con Paso 1 Hacer
+		Escribir "<<<<< Dia",i," >>>>>"
+		Escribir "Ingrese la T° Max:"
+		Leer mayor
+		Escribir "Ingrese la T° min:"
+		Leer menor
+		Escribir "La T° media es de: ",tm(mayor,menor)
+		Escribir ""
+	Fin Para
+	
+FinAlgoritmo

@@ -1,0 +1,73 @@
+Algoritmo ej5
+	
+	Definir i,n1,n2,Mayor,menor,sum,aux,n Como Entero
+	Definir prom Como Real
+	i=1
+	Mayor=0
+	menor=0
+	sum=0
+	Repetir
+		Escribir "Ingrese numero ",i
+		Leer n1
+		i=i+1
+	Mientras Que n1<>0 y i>2
+	Mayor=n1
+	sum=n1
+	
+	Repetir
+		Escribir "Ingrese numero ",i
+		Leer n2
+		i=i+1
+	Mientras Que n2<>0 y i>3
+	menor=n2
+	sum=sum+n2
+	
+	Repetir
+		Escribir "Ingrese numero ",i
+		Leer n
+		sum=sum+n
+		Si n=0 Entonces
+			Escribir "Fin del programa"
+		SiNo
+			i=i+1
+			Si Mayor>menor Entonces
+				Si Mayor>n Entonces
+					Si menor>n Entonces
+						menor=n
+					FinSi
+				SiNo
+					Mayor=n
+					Si Mayor<menor Entonces
+						aux=Mayor
+						Mayor=menor
+						menor=aux
+					FinSi
+				FinSi
+			SiNo
+				aux=Mayor
+				Mayor=menor
+				menor=aux
+				Si Mayor>n Entonces
+					Si menor>n Entonces
+						menor=n
+					FinSi
+				SiNo
+					Mayor=n
+					Si Mayor<menor Entonces
+						aux=Mayor
+						Mayor=menor
+						menor=aux
+					FinSi
+				FinSi
+			FinSi
+		FinSi
+	Mientras Que n<>0
+	
+	Escribir "Mayor: ",Mayor," y menor: ",menor
+	prom=sum/(i-1)
+	Escribir "El Mayor es: ",Mayor
+	Escribir "El menor es: ",menor
+	Escribir "La suma es: ",sum
+	Escribir "El promedio es: ",prom
+//	
+FinAlgoritmo

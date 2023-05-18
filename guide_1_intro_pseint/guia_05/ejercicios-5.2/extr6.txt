@@ -1,0 +1,56 @@
+Algoritmo extr4
+	Definir A,B,C Como Entero
+	Dimension A[3],B[3,3],C[3]
+	genera(A,B)
+	mostr(A,B)
+	multipl(A,B,C)
+	resultado(C)
+FinAlgoritmo
+
+SubProceso genera(A,B)
+	Definir i,j Como Entero
+	Para i<-0 Hasta 2 Con Paso 1 Hacer
+		Para j<-0 Hasta 2 Con Paso 1 Hacer
+			A[j]=Aleatorio(0,9)
+			B[i,j]=Aleatorio(0,9)
+		Fin Para
+	Fin Para
+FinSubProceso
+
+SubProceso mostr(A,B)
+	Definir i,j Como Entero
+	Escribir "<<<<< Vector A generada >>>>>"
+	Para i<-0 Hasta 2 Con Paso 1 Hacer
+		Escribir Sin Saltar"[",A[i],"]"
+	Fin Para
+	Escribir ""
+	Escribir "<<<<< Matriz B generada >>>>>"
+	Para i<-0 Hasta 2 Con Paso 1 Hacer
+		Para j<-0 Hasta 2 Con Paso 1 Hacer
+			Escribir Sin Saltar"[",B[i,j],"]"
+		Fin Para
+		Escribir ""
+	Fin Para
+FinSubProceso
+
+SubProceso multipl(A,B,C)
+	Definir i,j,k,aux Como Entero
+	Para i<-0 Hasta 2 Con Paso 1 Hacer
+		Para j<-0 Hasta 2 Con Paso 1 Hacer
+			aux=0
+			Para k<-0 Hasta 2 Con Paso 1 Hacer
+				aux = aux +(A[i]*B[k,j]) 
+			Fin Para
+			C[i]=aux
+		Fin Para
+	Fin Para
+FinSubProceso
+
+SubProceso resultado(C)
+	Definir i,j Como Entero
+	Escribir "<<<<< Matriz Resultante >>>>>"
+	Para i<-0 Hasta 2 Con Paso 1 Hacer
+		Escribir Sin Saltar"[",C[i],"]"
+	Fin Para
+	Escribir ""
+FinSubProceso

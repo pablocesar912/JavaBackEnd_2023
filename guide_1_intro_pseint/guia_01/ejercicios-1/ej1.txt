@@ -1,0 +1,8 @@
+Algoritmo programauno
+	
+	Definir respuesta_uno Como Caracter
+	Escribir "¿Como esta el día de hoy?"
+	Leer respuesta_uno
+	Escribir "El dia de hoy esta ",respuesta_uno
+	
+FinAlgoritmo

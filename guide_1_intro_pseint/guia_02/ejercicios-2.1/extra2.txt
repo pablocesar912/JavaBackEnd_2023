@@ -1,0 +1,20 @@
+Algoritmo extra2
+	
+	Definir import,desc Como Real
+	Definir mes Como Caracter
+	
+	Escribir "Ingrese el mes actual de la compra"
+	Leer mes
+	
+	Escribir "Ingrese el importe total a pagar"
+	Leer import
+	
+	Si mes="septiembre" o mes="octubre" o mes="noviembre" Entonces
+		Escribir "<<<< Mes de descuento (10%) >>>>"
+		desc = (10*import)/100
+		import = import-desc
+		Escribir "Importe total a pagar es: ",import," $"
+	SiNo
+		Escribir "Importe total a pagar es: ",import," $"
+	Fin Si
+FinAlgoritmo

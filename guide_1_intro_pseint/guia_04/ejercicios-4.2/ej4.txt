@@ -1,0 +1,23 @@
+Algoritmo ej4
+	Definir frase,letra Como Caracter
+	Escribir "Ingrese la frase"
+	Leer frase
+	Escribir "Ingrese la letra buscar"
+	Leer letra
+	Escribir "La letra ",letra," esta ",buscarletra(frase,letra)," en la frase"
+FinAlgoritmo
+
+Funcion contador = buscarletra(frase,letra)
+	
+	Definir contador,i,l Como Entero
+	Definir aux Como Caracter
+	contador=0
+	l=Longitud(frase)
+	Para i<-0 Hasta l-1 Con Paso 1 Hacer
+		aux=Subcadena(frase,i,i)
+		Si aux=letra Entonces
+			contador=contador+1
+		FinSi
+	Fin Para
+	
+FinFuncion

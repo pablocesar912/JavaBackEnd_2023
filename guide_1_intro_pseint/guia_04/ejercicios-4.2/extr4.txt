@@ -1,0 +1,32 @@
+Algoritmo sin_titulo
+	Definir c_hrs Como Entero
+	Definir name,day,trn,verif Como Caracter
+	Escribir "<<<<<IngreseDatos>>>>>"
+	Escribir "Nombre,dia,turno,cantidad de horas trabajada"
+	Leer name,day,trn,c_hrs
+	Escribir "¿El dia ingresado era feriado o festivo?"
+	Leer verif
+	Escribir "El trabajador: ",name
+	Escribir "Dia feriado o festivo: ",verif
+	Escribir "Sueldo del dia ",day," es de $",ganado(day,trn,c_hrs,verif)
+	
+FinAlgoritmo
+
+Funcion paga=ganado(day,trn,c_hrs,verif)
+	Definir paga Como Real
+	
+	Si trn="diurno" Entonces
+		Si verif="si"
+			paga=(c_hrs*((0.1*90)+90))
+		SiNo
+			paga=(c_hrs*90)
+		FinSi
+	SiNo
+		Si verif="si"
+			paga=(c_hrs*((0.15*125)+125))
+		SiNo
+			paga=(c_hrs*125)
+		FinSi
+	FinSi
+	
+FinFuncion

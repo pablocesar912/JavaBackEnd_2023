@@ -1,0 +1,13 @@
+Algoritmo extra3
+	
+	Definir radio,altura,vol Como Real
+	Escribir "Ingrese el radio del cilindro (m)"
+	Leer radio
+	
+	Escribir "Ingrese la altura del cilindro (m)"
+	Leer altura
+	
+	vol = trunc(PI * radio^2 * altura)
+	
+	Escribir "El volumen del cilindro es ",vol," m3"
+FinAlgoritmo

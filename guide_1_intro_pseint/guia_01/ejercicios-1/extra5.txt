@@ -1,0 +1,14 @@
+Algoritmo extra5
+	
+	Definir p1,p2,incremento,porcentaje Como Real
+	Escribir "Ingrese el precio del producto a inicio de año ($)"
+	Leer p1
+	Escribir "Ingrese el precio del producto a final de año ($)"
+	Leer p2
+	
+	incremento = p2 - p1
+	porcentaje = (incremento/p1)*100
+	
+	Escribir "El porcentaje de incremente de este año es de ",porcentaje," %"
+	
+FinAlgoritmo

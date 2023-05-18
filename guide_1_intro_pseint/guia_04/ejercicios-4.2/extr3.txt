@@ -1,0 +1,23 @@
+Algoritmo extr3
+	Definir usuario,contrasena Como Caracter
+	Definir i Como Entero
+	i=1
+	Repetir
+		Escribir "Ingrese Usuario ",i
+		Leer usuario
+		Escribir "Ingresar contraseña ",i
+		Leer contrasena
+		i=i+1
+	Mientras Que (probar(usuario,contrasena))<>1 y i<4
+	
+FinAlgoritmo
+
+Funcion login=probar(usuario,contrasena)
+	Definir login Como Entero
+		si(usuario="usuario1") y (contrasena="asdasd") Entonces
+			login=1
+		SiNo
+			login=0
+		FinSi
+FinFuncion
+	

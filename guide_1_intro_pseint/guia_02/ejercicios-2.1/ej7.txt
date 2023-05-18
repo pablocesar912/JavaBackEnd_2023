@@ -1,0 +1,27 @@
+//Realizar un programa que pida una frase o palabra y si la frase o palabra es de 4
+//caracteres de largo, el programa le concatenara un signo de exclamación al final, y si no
+//es de 4 caracteres el programa le concatenara un signo de interrogación al final. El
+//programa mostrará después la frase final. Nota: investigar la función Longitud() y
+//Concatenar() de Pseint.
+
+Algoritmo ej7
+	
+	Definir fop,cadena1,cadena2,cadena3 Como Caracter
+	Definir l Como Entero
+	cadena1="!"
+	cadena2 ="?"
+	
+	Escribir "Ingrese la frase o palabra"
+	Leer fop
+	
+	l = Longitud(fop)
+	
+	Si l = 4 Entonces
+		cadena3=Concatenar(fop,cadena1)
+		Escribir "Visualizamos: ",cadena3
+	SiNo
+		cadena3=Concatenar(fop,cadena2)
+		Escribir "Vemos que: ",cadena3
+	Fin Si
+	
+FinAlgoritmo

@@ -1,0 +1,19 @@
+Algoritmo sin_titulo
+	Definir n,i Como Entero
+	i=0
+	Escribir "Ingrese hasta donde se realizara la suma"
+	Leer n
+	Escribir "la suma es: ",suma(n,i)-1
+FinAlgoritmo
+
+Funcion resultado=suma(n,i)
+	Definir resultado Como Entero
+	resultado=1
+	si i=n Entonces
+		Escribir ""
+	SiNo
+		resultado=resultado+suma(n,i+1)
+		Escribir resultado
+	FinSi
+FinFuncion
+	

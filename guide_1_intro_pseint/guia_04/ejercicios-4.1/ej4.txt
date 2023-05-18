@@ -1,0 +1,30 @@
+Algoritmo ej4
+	Definir fop,aux Como Caracter
+	Definir i,l Como Entero
+	Escribir "Ingrese una palabra o frase"
+	Leer fop
+	l=Longitud(fop)
+	Para i<-0 Hasta (l-1) Con Paso 1 Hacer
+		aux=SubCadena(fop,i,i)
+		ver(aux)
+	Fin Para
+	Escribir ""
+FinAlgoritmo
+
+SubProceso ver(aux)
+	Segun aux Hacer
+		"a":
+			aux="@"
+		"e":
+			aux="#"
+		"i":
+			aux="$"
+		"o":
+			aux="%"
+		"u":
+			aux="*"
+		De Otro Modo:
+	Fin Segun
+	Escribir Sin Saltar aux
+FinSubProceso
+	

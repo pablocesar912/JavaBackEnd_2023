@@ -1,0 +1,27 @@
+Algoritmo ej3
+	Definir n,i,v,buscar,b,c Como Entero
+	c=0
+	Escribir "Ingrese el tamaño del vector"
+	Leer n
+	Dimension v(n)
+	Dimension b(n)
+	Escribir "Ingrese los valores"
+	Para i=0 Hasta n-1 Con Paso 1 Hacer
+		Leer v(i)
+	Fin Para
+	Escribir "Ingrese el numero a buscar"
+	Leer buscar
+	Para i<-0 Hasta n-1 Con Paso 1 Hacer
+		Si v[i]=buscar Entonces
+			b[c]=i
+			c=c+1
+		FinSi
+	Fin Para
+	Si c=0 Entonces
+		Escribir "El numero a busca no se encuantra en el vector"
+	SiNo
+		Para i<-0 Hasta (c-1) Con Paso 1 Hacer
+			Escribir"Las posiciones donde se encuantra ",buscar," es : [",b[i],"]"
+		Fin Para
+	FinSi
+FinAlgoritmo

@@ -1,0 +1,20 @@
+Algoritmo extra5
+	Definir n,i,c Como Entero
+	c=1
+	i=0
+	Escribir "Ingrese un numero"
+	Leer n
+	
+	Si n>=0 y n<=9 Entonces
+		i=i+1
+	SiNo
+		Mientras n>c o n=c Hacer
+			Si n>=c Entonces
+				i=i+1
+				c=c*10
+			FinSi
+		Fin Mientras
+	FinSi
+	
+	Escribir "digito es ",i
+FinAlgoritmo

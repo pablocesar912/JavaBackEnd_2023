@@ -1,0 +1,17 @@
+Algoritmo programa5
+	
+	Definir dato,litros,km Como Real
+	
+	Escribir "Cuantos litros de combustible cargo al auto"
+	Leer litros
+	
+	Escribir "Cuantos KM recorrio con el auto"
+	Leer km
+	
+	Escribir"si el auto consume 21 litro cada 200 km"
+	
+	dato = (litros/km)*100
+	
+	Escribir "El consumo es de ",dato
+	
+FinAlgoritmo

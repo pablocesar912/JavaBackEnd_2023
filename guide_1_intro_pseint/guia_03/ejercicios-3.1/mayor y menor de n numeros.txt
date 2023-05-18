@@ -1,0 +1,37 @@
+Algoritmo ejemplo
+	Definir mayor,menor,i,n,sum Como Entero
+	Definir prom Como Real
+	i=0
+	mayor=0
+	menor=0
+	sum=0
+	Repetir
+		Escribir "Ingrese numero"
+		Leer n
+		sum=sum+n
+		i=i+1
+		
+		Si i=1 y n<>0 Entonces
+			mayor=n
+		SiNo
+			Si n>mayor Entonces
+				mayor=n
+			FinSi
+		FinSi
+		
+		Si i=1 y n<>0 Entonces
+			menor=n
+		SiNo
+			Si n<>0 Entonces
+				Si n<menor Entonces
+					menor=n
+				FinSi
+			FinSi
+		FinSi
+		
+	Mientras Que n<>0
+	prom=sum/i
+	Escribir "El pormdio es ",prom
+	Escribir "El mayor es ",mayor
+	Escribir "El menor es ",menor
+FinAlgoritmo

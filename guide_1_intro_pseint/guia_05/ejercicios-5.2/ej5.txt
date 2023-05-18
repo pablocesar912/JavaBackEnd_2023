@@ -1,0 +1,23 @@
+Algoritmo ej5
+	Definir palabra,v Como Caracter
+	Definir i,j,k Como Entero
+	k=0
+	Dimension v[3,3]
+	Repetir
+		Escribir "Ingrese la palabra 9 caracteres"
+		Leer palabra
+	Mientras Que (Longitud(palabra)<>9)
+	Para i<-0 Hasta 2 Con Paso 1 Hacer
+		Para j<-0 Hasta 2 Con Paso 1 Hacer
+			v[i,j]=SubCadena(palabra,k,k)
+			k=k+1
+		Fin Para
+	Fin Para
+	
+	Para i<-0 Hasta 2 Con Paso 1 Hacer
+		Para j<-0 Hasta 2 Con Paso 1 Hacer
+			Escribir Sin Saltar v[i,j]," "
+		Fin Para
+		Escribir ""
+	Fin Para
+FinAlgoritmo

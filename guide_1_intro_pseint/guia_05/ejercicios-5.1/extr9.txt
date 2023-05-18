@@ -1,0 +1,19 @@
+Algoritmo extr9
+	Definir tam,i,v Como Entero
+	Escribir "ingrese el tamaño vector"
+	Leer tam
+	Dimension v(tam)
+	Para i<-0 Hasta tam-1 Con Paso 1 Hacer
+		Leer v(i)
+	FinPara
+	Escribir "La multiplicacion: ",mult(v,tam)
+FinAlgoritmo
+
+Funcion val=mult(v,tam)
+	Definir val,i Como Entero
+	val=1
+	Para i<-0 Hasta tam-1 Con Paso 1 Hacer
+		val=val*v[i]
+	FinPara
+FinFuncion
+	

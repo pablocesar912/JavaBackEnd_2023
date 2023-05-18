@@ -1,0 +1,9 @@
+Algoritmo extr1
+	Definir n Como Real
+	Escribir "Ingrese numero"
+	Leer n
+	Mientras n>=10 Hacer
+		Escribir"Ingrese numero"
+		Leer n
+	Fin Mientras
+FinAlgoritmo

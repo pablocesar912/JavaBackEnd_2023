@@ -1,0 +1,16 @@
+Algoritmo programa4
+	
+	Definir m,mm,cm,plg Como Real
+	
+	Escribir "Ingrese la cantidad en metro"
+	Leer m
+	
+	mm =(m*1000) /1
+	cm = (m * 100) / 1
+	plg = (cm * 1)/ 2.54
+	
+	Escribir "En milimetro es ",mm," mm"
+	Escribir "En centimetro es ",cm," cm"
+	Escribir "En pulgada es ",plg," plg"
+	
+FinAlgoritmo

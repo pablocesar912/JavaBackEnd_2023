@@ -1,0 +1,35 @@
+Algoritmo extr4
+	
+	Definir d,m,a Como Entero
+	Repetir
+		Escribir Sin Saltar"Ingrese dia"
+		Leer d
+		Si d<1 o d>31 Entonces
+			Escribir "Dia incorrecto"
+		FinSi
+	Mientras Que d>31 o d<=0
+	Repetir
+		Escribir Sin Saltar"Ingrese mes"
+		Leer m
+		Si d<1 o d>31 Entonces
+			Escribir "Dia incorrecto"
+		FinSi
+	Mientras Que d>12 o d<=0
+	Escribir Sin Saltar"Ingrese año"
+	Leer a
+	Si d=1 Entonces
+		a=a-1
+		Si m=1 Entonces
+			m=12
+		SiNo
+			m=m-1
+		FinSi
+		d=31
+	SiNo
+		d=d-1
+		Si d=31 Entonces
+			m=m-1
+		FinSi
+	FinSi
+	Escribir"La fecha anterior es: ",d,"/",m,"/",a
+FinAlgoritmo

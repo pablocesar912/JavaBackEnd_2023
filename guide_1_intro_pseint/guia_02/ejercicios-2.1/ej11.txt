@@ -1,0 +1,53 @@
+Algoritmo ej11
+	
+	Definir opc Como Caracter
+	Definir num1,num2,result Como Real
+	Escribir "Operaciones a realizar"
+	Escribir "S - SUMA"
+	Escribir "R - Resta"
+	Escribir "M - Multiplicacion"
+	Escribir "D - Division"
+	Leer opc
+	Escribir " "
+	Segun opc Hacer
+		"s"o "S":
+			Escribir "SUMA"
+			Escribir "Ingrese el numero 1"
+			Leer num1
+			Escribir "Ingrese el numero 2"
+			Leer num2
+			result = num1 + num2
+			Escribir "El resultado de la operacion es ",result
+			
+		"r"o"R":
+			Escribir "RESTA"
+			Escribir "Ingrese el numero 1"
+			Leer num1
+			Escribir "Ingrese el numero 2"
+			Leer num2
+			result = num1 - num2
+			Escribir "El resultado de la operacion es ",result
+			
+		"m"o"M":
+			Escribir "MULTIPLICACION"
+			Escribir "Ingrese el numero 1"
+			Leer num1
+			Escribir "Ingrese el numero 2"
+			Leer num2
+			result = num1 * num2
+			Escribir "El resultado de la operacion es ",result
+			
+		"d"o"D" :
+			Escribir "DIVISION"
+			Escribir "Ingrese el numero 1"
+			Leer num1
+			Escribir "Ingrese el numero 2"
+			Leer num2
+			result = num1 / num2
+			Escribir "El resultado de la operacion es ",result
+			
+		De Otro Modo:
+			Escribir "La opccion que ingreso no esta en las opcione, reinicie por favor"
+	Fin Segun
+	
+FinAlgoritmo

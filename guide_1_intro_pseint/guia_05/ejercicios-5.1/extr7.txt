@@ -1,0 +1,29 @@
+Algoritmo sin_titulo
+	Definir v,i,j,aux,tam Como Entero
+	Escribir "ingrese el tamaño vector"
+	Leer tam
+	Dimension v(tam)
+	Para i<-0 Hasta tam-1 Con Paso 1 Hacer
+		v(i)=Azar(100)
+	FinPara
+	Escribir "El vector generado es:"
+	Para i<-0 Hasta tam-1 Con Paso 1 Hacer
+		Escribir Sin Saltar"[",v[i],"]"
+	FinPara
+	Escribir ""
+	
+	Para i<-0 Hasta tam-1 Con Paso 1 Hacer
+		Para j<-0 Hasta tam-1 Con Paso 1 Hacer
+			Si v[i]<=v[j] Entonces
+				aux=v[i]
+				v[i]=v[j]
+				v[j]=aux
+			FinSi
+		FinPara
+	FinPara
+	Escribir "El vector ordenado de menor a mayor es:"
+	Para i<-0 Hasta tam-1 Con Paso 1 Hacer
+		Escribir Sin Saltar"[",v[i],"]"
+	FinPara
+	Escribir ""
+FinAlgoritmo

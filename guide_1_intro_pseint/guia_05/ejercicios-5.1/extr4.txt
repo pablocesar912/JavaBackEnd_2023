@@ -1,0 +1,38 @@
+Algoritmo extr4
+	Definir i,v,n,c1,c2,c3,c4 Como Entero
+	c1=0
+	c2=0
+	c3=0
+	c4=0
+	Escribir "Las Notas de los 100 estudiantes"
+	Dimension v[100]
+	Para i<-0 Hasta 99 Con Paso 1 Hacer
+		v[i]=Aleatorio(0,20)
+	Fin Para
+	Para i<-0 Hasta 99 Con Paso 1 Hacer
+		Escribir Sin Saltar"[",v[i],"]"
+	Fin Para
+	Escribir ""
+	Escribir "Calificacion de los 100 estudiantes"
+	Para i<-0 Hasta 99 Con Paso 1 Hacer
+		Si v[i]>=0 y v[i]<=5 Entonces
+			c1=c1+1
+		SiNo
+			Si v[i]>=6 y v[i]<=10 Entonces
+				c2=c2+1
+			SiNo
+				Si v[i]>=11 y v[i]<=15 Entonces
+					c3=c3+1
+				SiNo
+					Si v[i]>=16 y v[i]<=20 Entonces
+						c4=c4+1
+					FinSi
+				FinSi
+			FinSi
+		FinSi
+	Fin Para
+	Escribir "Deficiente: ",c1
+	Escribir "Regulares: ",c2
+	Escribir "Buenos: ",c3
+	Escribir "Excelente: ",c4
+FinAlgoritmo

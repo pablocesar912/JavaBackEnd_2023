@@ -1,0 +1,15 @@
+Algoritmo ej7
+	Definir frase,cad1 Como Caracter
+	Definir l,i Como Entero
+	Escribir "Ingrese una frase"
+	Leer frase
+	
+	l=Longitud(frase)
+	Escribir "<<<<<La frase queda>>>>>"
+	Para i<-0 Hasta (l-1) Con Paso 1 Hacer
+		cad1=Subcadena(frase,i,i)
+		Escribir Sin Saltar"",cad1
+		Escribir Sin Saltar" "
+	Fin Para
+	Escribir ""
+FinAlgoritmo

@@ -1,0 +1,18 @@
+Algoritmo ej12
+	
+	Definir num, resto Como Entero
+	
+	Escribir "Ingrese un numero"
+	Leer num
+	Si num == 0 Entonces
+		Escribir "el número no es par ni impar"
+	SiNo
+		resto = num MOD 2
+		Si resto == 0 Entonces
+			Escribir "Es un numero Par"
+		SiNo
+			Escribir "Es un numero Impar"
+		Fin Si
+		
+	Fin Si
+FinAlgoritmo

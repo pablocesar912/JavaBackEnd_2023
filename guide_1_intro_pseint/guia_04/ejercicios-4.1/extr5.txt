@@ -1,0 +1,55 @@
+Algoritmo extr5
+	
+	Definir l Como Entero
+	Definir f Como Caracter
+	
+	Escribir "Ingrese la frase"
+	Leer f
+	l=Longitud(f)
+	borarvovales(l,f)
+	
+FinAlgoritmo
+
+SubProceso borarvovales(l,f)
+	Definir i,c1,c2,c3,c4,c5 Como Entero
+	Definir aux Como Caracter
+	c1=0
+	c2=0
+	c3=0
+	c4=0
+	c5=0
+	Para i<-0 Hasta (l-1) Con Paso 1 Hacer
+		aux=SubCadena(f,i,i)
+		Segun aux Hacer
+			"a":
+				c1=c1+1
+				si c1>1 Entonces
+					aux="_"
+				FinSi
+			"e":
+				c2=c2+1
+				si c2>1 Entonces
+					aux="_"
+				FinSi
+			"i":
+				c3=c3+1
+				si c3>1 Entonces
+					aux="_"
+				FinSi
+			"o":
+				c4=c4+1
+				si c4>1 Entonces
+					aux="_"
+				FinSi
+			"u":
+				c5=c5+1
+				si c1>1 Entonces
+					aux="_"
+				FinSi
+		Fin Segun
+		Escribir Sin Saltar,aux
+	Fin Para
+	Escribir ""
+FinSubProceso
+
+	

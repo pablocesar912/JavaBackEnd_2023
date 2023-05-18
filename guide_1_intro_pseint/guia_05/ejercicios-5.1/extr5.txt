@@ -1,0 +1,75 @@
+Algoritmo extr5
+	Definir frase,v,caract,va Como Caracter
+	Definir i,posic,c1,c2,j  Como Entero
+	c1=0
+	c2=0
+	Escribir "Ingrese frase"
+	Leer frase
+	Dimension v(20),va(20)
+	Para i<-0 Hasta 19 Con Paso 1 Hacer
+		si i<=(Longitud(frase)-1) Entonces
+			v[i]=SubCadena(frase,i,i)
+		SiNo
+			v[i]=" "
+		FinSi
+	FinPara
+	Escribir ""
+	Escribir "La frase se paso a vector:"
+	Para i<-0 Hasta 19 Con Paso 1 Hacer
+		Escribir Sin Saltar v[i]
+	FinPara
+	Esperar 2 Segundos
+	Limpiar Pantalla
+	Escribir "Ingrese un Caracter"
+	Leer caract
+	Escribir "Ingrese la posicion"
+	Leer posic
+	
+	Si v[posic]=" " o posic>(Longitud(frase)-1)
+		v[posic]=caract
+		Escribir "La frase queda:"
+		Para i<-0 Hasta 19 Con Paso 1 Hacer
+			Escribir Sin Saltar v[i]
+		FinPara
+		Escribir ""
+	SiNo
+		Para i<-posic Hasta 19 Con Paso 1 Hacer
+			Si v[i]<>" " Entonces
+				c1=c1+1
+			SiNo
+				i=19
+			FinSi
+		FinPara
+		Para i<-posic Hasta 0 Con Paso -1 Hacer
+			Si v[i]<>" " Entonces
+				c2=c2+1
+			SiNo
+				i=0
+			FinSi
+		FinPara
+		Escribir c1
+		Escribir c2
+		Para i<-0 Hasta posic-1 Con Paso 1 Hacer
+				va[i]=v[i]
+		FinPara
+		
+		Para i<-posic+1 Hasta 19 Con Paso 1 Hacer
+			va[i]=v[i-1]
+		FinPara
+		
+		Para i<-0 Hasta 19 Con Paso 1 Hacer
+			Si i=posic Entonces
+				va[i]=caract
+			FinSi
+			Escribir Sin Saltar va[i]
+		FinPara
+		Escribir ""
+		
+	FinSi
+	
+FinAlgoritmo
+
+¡¡¡ATENCION!! : EL PROGRAMA COLOCA EL CARACTER EN EL POSICIONAMIENTO PEDIDO
+                DESPLAZANDO LOS CARACTERES, COMO TAMBIEN CUENTA LAS DISTANCIA
+                ENTRE LOS ESPACIOS MAS CONVENIENTE COMO EN EL EJEMPLO
+                NO SE ENTENDIO DE COLORLO DE DERECHA O IZQUIERDA

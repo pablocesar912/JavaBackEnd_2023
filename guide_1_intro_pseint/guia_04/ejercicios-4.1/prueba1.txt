@@ -1,0 +1,12 @@
+Funcion area <- area_circulo(radio)
+	Definir area Como Real
+	area= PI*radio^2
+Fin Funcion
+
+Algoritmo subprom
+	Definir rad,resultado Como Real
+	Escribir "Ingrese radio"
+	Leer rad
+	resultado=area_circulo(rad)
+	Escribir "El area del circulo con radio ",rad," es: ",resultado
+FinAlgoritmo
