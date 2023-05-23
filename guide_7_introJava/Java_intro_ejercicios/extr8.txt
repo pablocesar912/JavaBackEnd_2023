@@ -1,0 +1,50 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package java_1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Pablo
+ */
+public class extr8 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        System.out.print("Ingrese la cantidad de numeros a ingresar:");
+        int cantidad = leer.nextInt();
+        int numero, par = 0, impar = 0, i = 1;
+        double c = 0, suma = 0;
+
+        do {
+            do {
+                System.out.print("Ingrese el numero " + i + ":");
+                numero = leer.nextInt();
+            } while (numero == 0);
+
+            if (numero > 0) {
+                i++;
+                if (numero % 2 == 0) {
+                    par++;
+                } else {
+                    impar++;
+                }
+            }
+
+        } while (i <= cantidad && (numero % 5) != 0);
+
+        System.out.println("Impar: " + impar);
+        System.out.println("Par: " + par);
+        System.out.println("Cantidad de nuemeros leidos: " + i);
+
+    }
+
+}

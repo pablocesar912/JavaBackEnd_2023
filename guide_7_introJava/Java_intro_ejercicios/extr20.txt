@@ -1,0 +1,95 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package java_1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Pablo
+ */
+public class extr20 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        System.out.println("Registro de las notas(0 a 10) adquiridas por N estudiantes(01)");
+        System.out.print("Ingrese la cantidad de estudiantes:");
+        int tam = leer.nextInt();
+        double[][] notas = new double[tam][4];
+        String[] nombre = new String[tam];
+        String[] estado = new String[tam];
+        double[] promedio = new double[tam];
+        double suma = 0;
+        for (int i = 0; i < tam; i++) {
+            System.out.print("Ingrese Nombre:");
+            nombre[i] = leer.next();
+            for (int j = 0; j < 4; j++) {
+                switch (j) {
+                    case 0:
+                        do {
+                            System.out.print("Nota Primer trabajo (10%):");
+                            notas[i][j] = leer.nextInt();
+                        } while (notas[i][j] < 0 || notas[i][j] > 10);
+                        suma = suma + (0.10 * notas[i][j]);
+                        break;
+                    case 1:
+                        do {
+                            System.out.print("Nota Segundo trabajo (15%):");
+                            notas[i][j] = leer.nextInt();
+                        } while (notas[i][j] < 0 || notas[i][j] > 10);
+                        suma = suma + (0.15 * notas[i][j]);
+                        break;
+                    case 2:
+                        do {
+                            System.out.print("Nota Primer Integrador (25%):");
+                            notas[i][j] = leer.nextInt();
+                        } while (notas[i][j] < 0 || notas[i][j] > 10);
+                        suma = suma + (0.25 * notas[i][j]);
+                        break;
+                    case 3:
+                        do {
+                            System.out.print("Nota Segundo integrador (50%):");
+                            notas[i][j] = leer.nextInt();
+                        } while (notas[i][j] < 0 || notas[i][j] > 10);
+                        suma = suma + (0.50 * notas[i][j]);
+                        break;
+                }
+            }
+            promedio[i] = suma;
+            if (suma >= 7) {
+                estado[i] = "APROBADO";
+            } else {
+                estado[i] = "DESAPROBADO";
+            }
+            suma = 0;
+            System.out.println("");
+        }
+        System.out.println("El registo se lee de la siguiente manera:");
+        System.out.print("[Nombre] ");
+        System.out.print("[Notas] ");
+        System.out.print("[Promedio] ");
+        System.out.println("[Estado Academico] ");
+        System.out.println("");
+
+        int i = 0;
+        for (double[] fila : notas) {
+            String aux = "";
+            for (double elemento : fila) {
+                aux = aux + " " + elemento;
+            }
+            System.out.print(nombre[i] + " ");
+            System.out.print(aux + " ");
+            System.out.print("[" + promedio[i] + "] ");
+            System.out.println(estado[i]);
+            i++;
+        }
+
+    }
+
+}

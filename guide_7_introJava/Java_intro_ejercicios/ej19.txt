@@ -1,0 +1,38 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package java_1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Pablo
+ */
+public class ej19 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        System.out.println("Ingrese el tamaño del cuadrado:");
+        int tam = leer.nextInt();
+        int i, j;
+        for (i = 0; i < tam; i++) {
+            for (j = 0; j < tam; j++) {
+                if ((i == 0 || i == tam - 1) || j==0 || j==tam-1) {
+                    System.out.print("*");
+                }
+                if(j>0 && j<tam-1 & i!=0 && i!=tam-1)
+                {System.out.print(" ");}
+                
+            }
+            System.out.println("");
+        }
+
+    }
+
+}

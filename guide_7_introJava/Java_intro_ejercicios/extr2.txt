@@ -1,0 +1,43 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package java_1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Pablo
+ */
+public class extr2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        int A=0,B=0,C=0,D=0,aux=0;
+        System.out.print("ingrese el valor de A:");
+        A=leer.nextInt();
+        System.out.print("ingrese el valor de B:");
+        B=leer.nextInt();
+        System.out.print("ingrese el valor de C:");
+        C=leer.nextInt();
+        System.out.print("ingrese el valor de D:");
+        D=leer.nextInt();
+        System.out.println("Numero Ingresado");
+        System.out.println("A="+A+"         B="+B);
+        System.out.println("C="+C+"         D="+D);
+        aux=B;
+        B=(A+B+C+D)-A-B-D;
+        C=(A+aux+B+D)-aux-B-D;
+        A=(C+aux+B+D)-C-aux-B;
+        D=aux;
+        System.out.println("Cambiamos Valores");
+        System.out.println("B="+B+"         A="+A);
+        System.out.println("C="+C+"         D="+D);
+    }
+    
+}

@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package java_1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Pablo
+ */
+public class extr13 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        System.out.print("Ingrese la cantidad de familia:");
+        int familia = leer.nextInt();
+        int sumadeedades = 0, hijosehijas = 0,contador=0;
+        for (int i = 0; i < familia; i++) {
+            System.out.print("Ingrese la cantidad de Hijos/as de la Familia N°" + (i + 1)+":");
+            hijosehijas = leer.nextInt();
+            if(hijosehijas>0){
+                System.out.println("Ingrese las edades");
+            }
+            for (int j = 0; j < hijosehijas; j++) {
+                System.out.print("Hijo/a " + (j + 1) + ":");
+                int edad = leer.nextInt();
+                sumadeedades = sumadeedades + edad;
+                contador++;
+            }
+            System.out.println("");
+        }
+        System.out.println("La media de edad es:" + (sumadeedades / contador));
+
+    }
+
+}

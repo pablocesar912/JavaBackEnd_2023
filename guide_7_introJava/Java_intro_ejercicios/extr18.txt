@@ -1,0 +1,66 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package java_1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Pablo
+ */
+public class extr18 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        System.out.print("Ingrese el tamaños de los vector:");
+        int tam=leer.nextInt();
+        int[] vector1=new int[tam];
+        int[] vector2=new int[tam];
+        System.out.println("Ingrese los elementos del vector 1");
+        for(int i=0;i<tam;i++){
+            System.out.print("["+i+"]:");
+            vector1[i]=leer.nextInt();
+        }
+        System.out.println("Ingrese los elementos del vector 2");
+         for(int i=0;i<tam;i++){
+            System.out.print("["+i+"]:");
+            vector2[i]=leer.nextInt();
+        }
+        
+        
+        System.out.println("Vector Generado");
+        String aux1="";
+        for(int elemento : vector1){
+            aux1=aux1+"["+elemento+"]";
+        }
+        System.out.println(aux1);
+        
+         System.out.println("Vector Generado");
+        String aux2="";
+        for(int elemento : vector2){
+            aux2=aux2+"["+elemento+"]";
+        }
+        System.out.println(aux2);
+        
+        int bandera=0;
+        for(int i=0;i<tam;i++){
+            if(vector1!=vector2)
+            {
+                bandera=1;
+                i=tam;
+            }
+        }
+        if(bandera==0){
+            System.out.println("Los vectores son Iguales");
+        }else{
+        System.out.println("Los vectores son distintos");}
+        
+    }
+    
+}

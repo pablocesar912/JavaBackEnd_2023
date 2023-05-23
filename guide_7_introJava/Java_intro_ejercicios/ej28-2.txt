@@ -1,0 +1,114 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package java_1;
+
+import java.util.Random;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Pablo
+ */
+public class ej28-2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+        System.out.println("Matriz M de 10x10 Generado:");
+        int[][] matrizM = new int[10][10];
+        Orden10(matrizM);
+        System.out.println("\nMatriz P 3x3");
+        int[][] matrizP = new int[3][3];
+        Orden3(matrizP);
+        String[][] matrizAux = new String[3][3];
+        int resultado = buscarM_P(matrizM, matrizP, matrizAux);
+        conclusion(resultado);
+        if (resultado == 9) {
+            System.out.println("\nPosicion de la Matriz P 3x3 en la MatrizM 10x10");
+            posiciondelamatriz3x3(matrizAux);
+        }
+    }
+//---------------------------------------------------------------------------//
+
+    public static void Orden10(int[][] matrizM) {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                matrizM[i][j] = (int) (Math.random() * (99 - 0 + 1) + 0);
+                System.out.print(matrizM[i][j] + " ");
+            }
+            System.out.println("");
+        }
+    }
+//---------------------------------------------------------------------------//
+
+    public static void Orden3(int[][] matrizP) {//inicio//
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print("m[" + i + "][" + j + "]=");
+                matrizP[i][j] = leer.nextInt();
+            }
+        }
+        System.out.println("Matriz P de 3x3 Generado:");
+        for (int[] fila : matrizP) {
+            String aux = "";
+            for (int elemento : fila) {
+                aux = aux + " " + elemento;
+            }
+            System.out.println(aux);
+        }
+    }//fin//
+//---------------------------------------------------------------------------//
+
+    public static int buscarM_P(int[][] matrizM, int[][] matrizP, String[][] matrizAux) {
+        int suma = 0, f, c;
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (matrizM[i][j] == matrizP[0][0]) {
+                    for (f = 0; f < 3; f++) {
+                        for (c = 0; c < 3; c++) {
+                            if (matrizM[i + f][j + c] == matrizP[f][c]) {
+                                suma++;
+                                matrizAux[f][c] = "[" + (i + f) + "][" + (j + c) + "]";
+                                if (suma == 9) {
+                                    break;
+                                }
+                            } else {
+                                suma = 0;
+                                break;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+        return suma;
+    }
+//---------------------------------------------------------------------------//
+
+    public static void conclusion(int resultado) {
+        if (resultado == 9) {
+            System.out.println("La matriz P de 3x3 esta en la matriz M de 10x10");
+        } else {
+            System.out.println("La matriz P de 3x3 no se encuantra en la matriz M de 10x10");
+        }
+    }
+
+//---------------------------------------------------------------------------//
+    public static void posiciondelamatriz3x3(String[][] matrizAux) {
+        for (String[] fila : matrizAux) {
+            String aux = "";
+            for (String elemento : fila) {
+                aux = aux + " " + elemento;
+            }
+            System.out.println(aux);
+        }
+    }
+//---------------------------------------------------------------------------//
+}

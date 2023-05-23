@@ -1,0 +1,45 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package java_1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Pablo
+ */
+public class extr10 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        System.out.println("Multiplcacion realizada");
+        System.out.println("Es hora de probar tu suerte");
+        int n1 = (int)(Math.random()*(10-0+1)+0);/* (int)(Math.random()*(N-M+1)+M); Valor entre M(final) y N(inicio), ambos incluidos*/
+        int n2 = (int)(Math.random()*(10-0+1)+0);
+        int adivinar=n1*n2;
+        System.out.println(adivinar);
+        int usuario,i=0;
+        do{
+            if(i==0){
+                System.out.print("Ingrese el posible reultado:");
+                usuario=leer.nextInt();
+            }
+            else{
+                System.out.println("El resultado ingresado es incorrecto");
+                System.out.print("Ingrese el posible reultado:");
+                usuario=leer.nextInt();
+            }
+            i++;
+            System.out.println("");
+        }while(adivinar!=usuario);
+        System.out.println("Su resultado es correcto");
+        
+    }
+    
+}

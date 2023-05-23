@@ -1,0 +1,49 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package java_1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Pablo
+ */
+public class extr23 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int cantidad;
+        cantidad = valorN();
+        int[] vector = new int[cantidad];
+        Fibonacci(cantidad,vector);
+    }
+//---------------------------------------------------------------------------//
+    public static int valorN() {
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        int numero;
+        do {
+            System.out.print("Ingrese un numero mayor a 0:");
+            numero=leer.nextInt();
+        } while (numero<=0);
+        return numero;
+    }
+//---------------------------------------------------------------------------//
+    public static void Fibonacci(int cantidad,int[] vector ){
+        int valor1 = 1, valor2 = 0, valor3, contador = 0;
+        do {
+            valor3 = valor1 + valor2;
+            valor1 = valor2;
+            valor2 = valor3;
+            vector[contador] = valor1;
+            System.out.print("[" + vector[contador] + "]");
+            contador++;
+        } while (cantidad > contador);
+        System.out.println("");    
+    } 
+//---------------------------------------------------------------------------//
+}

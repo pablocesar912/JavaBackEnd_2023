@@ -1,0 +1,70 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package java_1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Pablo
+ */
+public class extr4 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        int numero = 0, contador = 0;
+        do {
+            if (contador == 0) {
+                System.out.print("Ingrese un número entre 1 y 10: ");
+                numero = leer.nextInt();
+            } else {
+                System.out.println("El numero ingresado no esta entre los rango pedidos");
+                System.out.print("Ingrese un número entre 1 y 10: ");
+                numero = leer.nextInt();
+            }
+            contador++;
+        } while (numero < 1 || numero > 10);
+
+        String conversor = "";
+        conversor = String.valueOf(numero);
+        System.out.println("Converso de Numero entero a Numero Romano:");
+        if (numero == 1) {
+            System.out.println(numero + "=" + conversor.replace("1", "I"));
+        }
+        if (numero == 2) {
+            System.out.println(numero + "=" + conversor.replace("2", "II"));
+        }
+        if (numero == 3) {
+            System.out.println(numero + "=" + conversor.replace("3", "III"));
+        }
+        if (numero == 4) {
+            System.out.println(numero + "=" + conversor.replace("4", "IV"));
+        }
+        if (numero == 5) {
+            System.out.println(numero + "=" + conversor.replace("5", "V"));
+        }
+        if (numero == 6) {
+            System.out.println(numero + "=" + conversor.replace("6", "VI"));
+        }
+        if (numero == 7) {
+            System.out.println(numero + "=" + conversor.replace("7", "VII"));
+        }
+        if (numero == 8) {
+            System.out.println(numero + "=" + conversor.replace("8", "VIII"));
+        }
+        if (numero == 9) {
+            System.out.println(numero + "=" + conversor.replace("9", "IX"));
+        }
+        if (numero == 10) {
+            System.out.println(numero + "=" + conversor.replace("10", "X"));
+        }
+    }
+
+}

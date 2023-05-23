@@ -1,0 +1,49 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package java_1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Pablo
+ */
+public class extr5 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+
+        System.out.print("Ingrese el tipo de socio: ");
+        String tipodesocio = leer.next();
+        tipodesocio = tipodesocio.toUpperCase();
+        System.out.print("Ingrese el costo del tratamiento: ");
+        double monto = leer.nextDouble();
+        switch (tipodesocio) {
+            case "A":
+                monto = monto - (0.5 * monto);
+                System.out.println("El Socio " + tipodesocio + " tiene un descuento del 50%");
+                System.out.println("Monto a pagas : $" + monto);
+                break;
+            case "B":
+                monto = monto - (0.35 * monto);
+                System.out.println("El Socio " + tipodesocio + " tiene un descuento del 35%");
+                System.out.println("Monto a pagas : $" + monto);
+                break;
+            case "C":
+                monto = monto;
+                System.out.println("El Socio " + tipodesocio + " tiene un descuento del 0%");
+                System.out.println("Monto a pagas : $" + monto);
+                break;
+            default:
+                System.out.println("El tipo de socio es incorrecto");
+        }
+
+    }
+
+}

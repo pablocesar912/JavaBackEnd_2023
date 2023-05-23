@@ -1,0 +1,52 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package java_1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Pablo
+ */
+public class extr1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+                Scanner leer = new Scanner(System.in).useDelimiter("\n");
+                System.out.println("Ingrese los min:");
+                int min = leer.nextInt();
+                int dia=0,hora=0;
+                System.out.println("COnversor");
+                if(min==1440)
+                {
+                    dia=min/1440;
+                    System.out.println("Es "+dia+" dia y "+hora+" hora");
+                }
+                else
+                {
+                   if(min>1440)
+                   {
+                       dia = min/1440;
+                       min=min-(dia*1440);
+                       hora=min/60;
+                       System.out.println("Es "+dia+" dia y "+hora+" hora");
+                   }
+                   else
+                   {
+                       hora=min/60;
+                       System.out.println("Es "+dia+" y "+hora+" hora");
+                   }
+                    
+                }
+        
+        
+        
+    }
+    
+}
